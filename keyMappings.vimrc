@@ -18,3 +18,5 @@ nmap <Leader>t :sp <Bar> te<CR><C-w><C-r>
 "Get out of editing mode in a terminal
 tnoremap <Esc> <C-\><C-n>
 
+"Source the config files
+nmap <Leader>r :so $MYVIMRC<CR>

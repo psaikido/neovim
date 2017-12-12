@@ -20,3 +20,8 @@ tnoremap <Esc> <C-\><C-n>
 
 "Source the config files
 nmap <Leader>r :so $MYVIMRC<CR>
+
+"PHP folding
+nmap <F5> <Esc>:EnableFastPHPFolds<Cr>
+nmap <F6> <Esc>:EnablePHPFolds<Cr>
+nmap <F7> <Esc>:DisablePHPFolds<Cr>

@@ -10,7 +10,8 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
-"Then go :PluginInstall to get the plugins.
+Plugin 'phpfolding.vim'
 call vundle#end()
+"Then go :PluginInstall to get the plugins.
 
 filetype plugin indent on 

@@ -11,6 +11,7 @@ Plugin 'gmarik/vundle'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
 Plugin 'phpfolding.vim'
+Plugin 'joonty/vdebug'
 call vundle#end()
 "Then go :PluginInstall to get the plugins.
 

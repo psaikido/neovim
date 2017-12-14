@@ -3,7 +3,7 @@ let g:mapleader = ";"
 "Invoke NERDTree 
 map <Leader>e :NERDTree<CR>
 
-"Synchonise NERDTree with current file
+"Synchonis: NERDTree with current file
 nmap <Leader>s :NERDTreeFind<CR>
 
 "Zoom in on window

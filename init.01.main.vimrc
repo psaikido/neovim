@@ -8,7 +8,6 @@ syntax on
 set hlsearch
 set nowrap
 colorscheme industry
-filetype off
 
 "PHP folding
 let g:DisableAutoPHPFolding = 1

@@ -15,4 +15,3 @@ Plugin 'joonty/vdebug'
 call vundle#end()
 "Then go :PluginInstall to get the plugins.
 
-filetype plugin indent on 

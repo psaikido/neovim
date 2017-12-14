@@ -29,3 +29,6 @@ nmap <Leader>b :Breakpoint<CR>
 "Save
 nmap <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
+
+"Close
+nmap <C-c> :q<CR>

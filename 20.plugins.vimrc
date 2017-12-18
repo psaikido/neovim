@@ -12,6 +12,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlp.vim'
 Plugin 'phpfolding.vim'
 Plugin 'joonty/vdebug'
+Plugin 'jreybert/vim-largefile'
+Plugin 'iCyMind/NeoSolarized'
 call vundle#end()
 "Then go :PluginInstall to get the plugins.
 
+colorscheme NeoSolarized
+set background=dark

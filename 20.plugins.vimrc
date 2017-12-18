@@ -1,10 +1,12 @@
 "git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-"
-"Linux
-set rtp+=~/.config/nvim/bundle/Vundle.vim/
 
-"Mac
-"set rtp+=~/.config/nvim/bundle/Vundle/
+if g:os == 'Linux'
+    set rtp+=~/.config/nvim/bundle/Vundle.vim/
+endif
+
+if g:os == 'Darwin'
+    set rtp+=~/.config/nvim/bundle/Vundle/
+endif
 
 call vundle#begin()
 Plugin 'gmarik/vundle'

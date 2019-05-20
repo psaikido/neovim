@@ -32,3 +32,6 @@ imap <C-s> <Esc>:w<CR>
 
 "Close
 nmap <C-c> :q<CR>
+
+"FuzzyFinder
+nnoremap <C-p> :FuzzyOpen<CR>

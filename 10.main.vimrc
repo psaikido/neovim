@@ -7,13 +7,7 @@ syntax on
 set hlsearch
 set nowrap
 
-if g:os == 'Darwin'
-    set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
-endif
-
-if g:os == 'Linux'
-    set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
-endif
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
 
 "PHP folding
 let g:DisableAutoPHPFolding = 1

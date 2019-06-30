@@ -34,4 +34,11 @@ imap <C-s> <Esc>:w<CR>
 nmap <C-c> :q<CR>
 
 "FuzzyFinder
-nnoremap <C-p> :FuzzyOpen<CR>
+nmap <Leader>f <Esc>:Ag<CR>
+
+"PHP folding
+let g:DisableAutoPHPFolding = 1
+
+"Consider files of 10Mg and above as 'large'
+let g:LargeFile = 1
+

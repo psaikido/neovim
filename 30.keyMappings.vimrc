@@ -3,6 +3,9 @@ let g:mapleader = ";"
 "Invoke NERDTree 
 map <Leader>e :NERDTree<CR>
 
+"Invode fugitive git status
+map <Leader>g :Gstatus<CR>
+
 "Synchonis: NERDTree with current file
 nmap <Leader>s :NERDTreeFind<CR>
 

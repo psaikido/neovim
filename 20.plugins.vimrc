@@ -13,9 +13,14 @@ Plugin 'iCyMind/NeoSolarized'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'fugitive.vim'
+Plugin 'w0rp/ale'
 call vundle#end()
 filetype plugin indent on
 "Go :PluginInstall to get the plugins.
 
 colorscheme NeoSolarized
 set background=dark
+
+let g:ale_fixers = {}
+let g:ale_fixers.javascript = ['standard']
+let g:ale_fix_on_save = 1

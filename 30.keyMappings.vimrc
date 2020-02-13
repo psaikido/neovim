@@ -45,6 +45,4 @@ let g:DisableAutoPHPFolding = 1
 "Consider files of 10Mg and above as 'large'
 let g:LargeFile = 1
 
-let g:deoplete#enable_at_startup = 1
-
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P

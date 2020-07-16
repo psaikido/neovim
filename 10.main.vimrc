@@ -1,4 +1,3 @@
-set nocp
 set nu
 set ai
 set mouse=a

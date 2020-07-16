@@ -53,3 +53,6 @@ function! KramifyPoem()
 endfunction
 
 nmap <Leader>k :call KramifyPoem()<CR>
+
+"Use escape key to turn off highlight after a search
+nnoremap <esc> :noh<return><esc>

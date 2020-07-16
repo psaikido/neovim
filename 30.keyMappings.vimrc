@@ -6,7 +6,7 @@ map <Leader>e :NERDTree<CR>
 "Synchronise NERDTree with current file
 nmap <Leader>s :NERDTreeFind<CR>
 
-"Invode fugitive git status
+"Invoke fugitive git status
 map <Leader>g :Gstatus<CR>
 
 "Zoom in on window
@@ -45,8 +45,8 @@ let g:DisableAutoPHPFolding = 1
 "Consider files of 10Mg and above as 'large'
 let g:LargeFile = 1
 
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-
 "macros
 "this one kramdown-ifies poems copied from lyftrak
-let @p = 'A  dd'
+let @p = 'A  jdd'
+
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P

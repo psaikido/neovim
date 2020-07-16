@@ -46,3 +46,7 @@ let g:DisableAutoPHPFolding = 1
 let g:LargeFile = 1
 
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+"macros
+"this one kramdown-ifies poems copied from lyftrak
+let @p = 'A  dd'

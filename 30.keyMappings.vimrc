@@ -45,8 +45,11 @@ let g:DisableAutoPHPFolding = 1
 "Consider files of 10Mg and above as 'large'
 let g:LargeFile = 1
 
-"macros
-"this one kramdown-ifies poems copied from lyftrak
-let @p = 'A  jdd'
-
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+"this one kramdown-ifies poems copied from lyftrak
+function! KramifyPoem()
+    normal! A  jdd
+endfunction
+
+nmap <Leader>k :call KramifyPoem()<CR>

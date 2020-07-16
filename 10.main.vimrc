@@ -11,3 +11,7 @@ set termguicolors
 filetype plugin on
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+
+" Spelling
+autocmd FileType markdown set spell spelllang=en_gb
+set spellcapcheck=

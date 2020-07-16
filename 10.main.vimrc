@@ -1,7 +1,7 @@
-set nu
-set ai
+set number
+set autoindent
 set mouse=a
-set ic
+set ignorecase
 syntax on 
 set hlsearch
 set nowrap

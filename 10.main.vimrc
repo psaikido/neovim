@@ -2,7 +2,7 @@ set number
 set autoindent
 set mouse=a
 set ignorecase
-syntax on 
+set syntax=on 
 set hlsearch
 set nowrap
 set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab

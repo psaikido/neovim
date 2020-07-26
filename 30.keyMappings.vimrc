@@ -58,6 +58,6 @@ nmap <Leader>k :call KramifyPoem()<CR>
 nnoremap <esc> :noh<return><esc>
 
 "Snippets
-"Markdown
 nmap <Leader>fm :-1read $HOME/dotfiles/neovim/snippets/front-matter.snp<cr>
 nmap <Leader>ht :-1read $HOME/dotfiles/neovim/snippets/html-skeleton.snp<cr>
+nmap <Leader>kb :edit $HOME/dotfiles/neovim/30.keyMappings.vimrc<cr>

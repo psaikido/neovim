@@ -56,3 +56,8 @@ nmap <Leader>k :call KramifyPoem()<CR>
 
 "Use escape key to turn off highlight after a search
 nnoremap <esc> :noh<return><esc>
+
+"Snippets
+"Markdown
+nmap <Leader>fm :-1read $HOME/dotfiles/neovim/snippets/front-matter.snp<cr>
+nmap <Leader>ht :-1read $HOME/dotfiles/neovim/snippets/html-skeleton.snp<cr>

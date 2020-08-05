@@ -52,7 +52,7 @@ function! KramifyPoem()
     normal! A  jdd
 endfunction
 
-nmap <Leader>k :call KramifyPoem()<CR>
+nmap <Leader>k :call KramifyPoem()<cr>
 
 "Use escape key to turn off highlight after a search
 nnoremap <esc> :noh<return><esc>
@@ -61,3 +61,18 @@ nnoremap <esc> :noh<return><esc>
 nmap <Leader>fm :-1read $HOME/dotfiles/neovim/snippets/front-matter.snp<cr>
 nmap <Leader>ht :-1read $HOME/dotfiles/neovim/snippets/html-skeleton.snp<cr>
 nmap <Leader>kb :edit $HOME/dotfiles/neovim/30.keyMappings.vimrc<cr>
+
+"Decrypt my gpg
+function! GpgOpen()
+    execute "!$HOME/bin/gpgOpen.sh"
+    vi $HOME/crypt/k.txt
+endfunction
+
+"Encrypt my gpg
+function! GpgClose()
+   execute "!$HOME/bin/gpgClose.sh"
+   normal :q
+endfunction
+
+nmap <Leader>pwo :call GpgOpen()<cr>
+nmap <Leader>pwc :call GpgClose()<cr>

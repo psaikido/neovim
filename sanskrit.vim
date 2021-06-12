@@ -1,3 +1,21 @@
+" To use these characters you get into insert mode,
+" got Ctrl+k and the two characters 
+" eg. Ctrl+k A- will output Ā.
+"
+" These commented out ones are already in the default digraph.
+" digraph A-  256 " Ā
+" digraph a-  257 " ā
+" digraph I-  298 " Ī
+" digraph i-  299 " ī
+" digraph U-  362 " Ū
+" digraph u-  363 " ū
+" digraph N. 7748 " Ṅ
+" digraph n. 7749 " ṅ
+" digraph N?  209 " Ñ
+" digraph n?  241 " ñ
+" digraph S'  346 " Ś
+" digraph s'  347 " ś
+
 digraph R, 7770 " Ṛ
 digraph r, 7771 " ṛ
 digraph R- 7772 " Ṝ

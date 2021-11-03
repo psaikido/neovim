@@ -14,7 +14,6 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'fugitive.vim'
 Plugin 'w0rp/ale'
-Plugin 'neoclide/coc.nvim'
 Plugin 'mattn/emmet-vim'
 call vundle#end()
 filetype plugin indent on

@@ -64,21 +64,6 @@ nmap <Leader>ht :-1read $HOME/dotfiles/neovim/snippets/html-skeleton.snp<cr>
 "Open this keyMappings file
 nmap <Leader>kb :edit $HOME/dotfiles/neovim/30.keyMappings.vimrc<cr>
 
-"Decrypt my gpg
-function! GpgOpen()
-    execute "!$HOME/bin/gpgOpen.sh"
-    vi $HOME/crypt/k.txt
-endfunction
-
-"Encrypt my gpg
-function! GpgClose()
-   execute "!$HOME/bin/gpgClose.sh"
-   normal :q
-endfunction
-
-nmap <Leader>pwo :call GpgOpen()<cr>
-nmap <Leader>pwc :call GpgClose()<cr>
-
 "CoC
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :

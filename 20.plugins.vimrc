@@ -15,6 +15,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'fugitive.vim'
 Plugin 'w0rp/ale'
 Plugin 'mattn/emmet-vim'
+Plugin 'norcalli/nvim-colorizer.lua'
 call vundle#end()
 filetype plugin indent on
 "Go :PluginInstall to get the plugins.
@@ -25,3 +26,5 @@ set background=dark
 let g:ale_linters = {}
 let g:ale_linters.javascript = ['eslint']
 let g:ale_linters_eslint_use_global = 1
+
+lua require'colorizer'.setup()

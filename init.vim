@@ -12,6 +12,7 @@ source $HOME/dotfiles/neovim/plugin-config/60.nvim-colorizer.vimrc
 source $HOME/dotfiles/neovim/plugin-config/70.phpfolding.vimrc
 source $HOME/dotfiles/neovim/plugin-config/80.vdebug.vimrc
 source $HOME/dotfiles/neovim/plugin-config/90.vim-largefile.vimrc
+source $HOME/dotfiles/neovim/plugin-config/910.which-key.vimrc
 source $HOME/dotfiles/neovim/40.hc-utils.vimrc
 source $HOME/dotfiles/neovim/50.javascript.vimrc
 source $HOME/dotfiles/neovim/60.sanskrit.vim

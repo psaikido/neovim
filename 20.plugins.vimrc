@@ -16,6 +16,7 @@ Plugin 'phpfolding.vim'
 Plugin 'joonty/vdebug'
 Plugin 'jreybert/vim-largefile'
 Plugin 'gmarik/vundle'
+Plugin 'folke/which-key.nvim'
 call vundle#end()
 filetype plugin indent on
 "Go :PluginInstall to get the plugins.

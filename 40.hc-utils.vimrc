@@ -3,9 +3,18 @@ function! JournalEntry()
     normal! ggO
     normal! O
     normal! O
-    call append(0, "====")
+    call append(0, "===")
     call append(1, strftime('%Y-%m-%d'))
 endfunction
 
 nmap <Leader>je :call JournalEntry()<cr>
 
+"syntax hilighting for journal
+:syntax clear
+:syntax case match
+:syntax match txtHeadLine /===/
+:highlight link txtHeadLine Structure
+
+":syntax match txtHeadDate /^(19|20)\d\d-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/
+:syntax match txtHeadDate /^\d\d\d\d-\d\d-\d\d$/
+:highlight link txtHeadDate Structure

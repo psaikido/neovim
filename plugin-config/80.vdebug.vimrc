@@ -1,3 +1,3 @@
 "Vdebug set breakpoint
-nmap <Leader>b :Breakpoint<CR>
+nmap <Leader>BP :Breakpoint<CR>
 

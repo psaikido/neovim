@@ -16,6 +16,3 @@ nmap <C-c> :q<CR>
 "Use escape key to turn off highlight after a search
 nnoremap <esc> :noh<return><esc>
 
-"Open this keyMappings file
-nmap <Leader>kb :edit $HOME/dotfiles/neovim/30.keyMappings.vimrc<cr>
-

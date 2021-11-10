@@ -19,8 +19,7 @@ function! JournalEntry()
     call append(5, '- mood: ')
     call append(6, '- sleep: ')
     call append(7, '- tags: ')
-    call append(8, '- pix: ')
-    call append(9, '')
+    call append(8, '')
 endfunction
 
 nmap <Leader>je :call JournalEntry()<cr>

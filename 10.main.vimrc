@@ -10,3 +10,7 @@ set termguicolors
 set autochdir
 filetype plugin on
 
+" Don't use python2, force python3.
+let g:loaded_python_provider = 0
+let g:python3_host_prog = '/usr/bin/python3'
+set pyxversion=3

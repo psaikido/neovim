@@ -52,5 +52,6 @@ function! OutputFilteredResults(res) abort
     set buftype=nofile
     vsplit filter_journal.md
     normal! "ap
+    set buftype=
 endfunction
 

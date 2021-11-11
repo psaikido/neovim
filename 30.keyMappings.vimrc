@@ -16,3 +16,8 @@ nmap <C-c> :q<CR>
 "Use escape key to turn off highlight after a search
 nnoremap <esc> :noh<return><esc>
 
+"Switch with line below
+map <c-d> ddp
+
+"Switch with line above
+map <c-u> ddkP

@@ -1,5 +1,5 @@
 "Boilerplate for a new journal entry
-function! JournalEntry()
+function! JournalEntry() abort
     "Increment the id.
     "First find the last one and yank it into register '0'.
     "Once found, increment and save it to insert later.
@@ -24,11 +24,33 @@ endfunction
 
 nmap <Leader>je :call JournalEntry()<cr>
 
-"syntax hilighting for journal
-":syntax case match
-":syntax match txtHeadLine /===/
-":highlight link txtHeadLine Structure
-"
-":syntax match txtHeadDate /^\(19\|20\)\d\{2}-\d\{2}-\d\{2}$/
-":highlight link txtHeadDate Structure
+"Filter by tag, output to new split
+function! JournalFilter(searchTerm) abort
+    call cursor(1,1)
+    let str = 'tags: ' . a:searchTerm
+
+    let tmp = []
+    "clear register 'a' 
+    normal! qaq
+    execute 'g/' . str . '/call add(tmp, line("."))'
+
+    for i in tmp
+        call GetSurroundingEntry(i) 
+    endfor
+
+    call OutputFilteredResults(@a)
+endfunction
+
+function! GetSurroundingEntry(lineNumber) abort
+    call cursor(a:lineNumber, 1)
+    normal! {jV/---k"Ay
+endfunction
+
+function! OutputFilteredResults(res) abort
+    setlocal splitright
+    set filetype=markdown
+    set buftype=nofile
+    vsplit filter_journal.md
+    normal! "ap
+endfunction
 

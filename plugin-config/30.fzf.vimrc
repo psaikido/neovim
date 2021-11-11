@@ -1,4 +1,4 @@
 "FuzzyFinder FZF
 "Requires Ag (silver) installing from the SilverSearcher
-nmap <Leader>f <Esc>:Ag<CR>
+nmap <Leader>a <Esc>:Ag<CR>
 

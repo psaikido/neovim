@@ -1,11 +1,11 @@
 "Invoke NERDTree 
-map <Leader>e :NERDTree<CR>
+nnoremap <Leader>e :NERDTree<CR>
 
 "Synchronise NERDTree with current file
-nmap <Leader>s :NERDTreeFind<CR>
+nnoremap <Leader>s :NERDTreeFind<CR>
 
 "Bookmark
-nmap <Leader>b :Bookmark<CR>
+nnoremap <Leader>b :Bookmark<CR>
 
 let NERDTreeShowBookmarks = 1
 let NERDTreeMinimalUI = 1

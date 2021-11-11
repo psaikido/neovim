@@ -17,7 +17,7 @@ nmap <C-c> :q<CR>
 nnoremap <esc> :noh<return><esc>
 
 "Switch with line below
-nnoremap <c-d> ddp
+nnoremap <Leader>d ddp
 
 "Switch with line above
-nnoremap <c-u> ddkP
+nnoremap <Leader>u ddkP

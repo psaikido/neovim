@@ -24,4 +24,4 @@ source $HOME/dotfiles/neovim/90.terminal.vimrc
 
 filetype plugin indent on
 
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%F\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P

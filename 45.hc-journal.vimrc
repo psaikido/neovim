@@ -54,3 +54,42 @@ function! OutputFilteredResults(res) abort
     normal! "ap
     set buftype=
 endfunction
+
+function! GetTags()
+    call cursor(1,1)
+    let tags = 'tags: '
+    let tag = ''
+    let arTags = []
+    let uniqueTags = []
+
+    "clear register 'a' 
+    normal! qaq
+    "Find the tag strings and load them into array arTags
+    execute 'g/' . tags . '/call add(arTags, getline(line(".")))'
+
+    for i in arTags
+        "Clean the string to leave just the tags themselves.
+        let tag = substitute(i, '- tags: ', '', '')
+
+        "Some tag strings have multiple comma separated values
+        let lump = split(tag, ',')
+
+        for item in lump
+            if IsUnique(uniqueTags, item)
+                call add(uniqueTags, item)
+            endif
+        endfor
+    endfor
+
+    echom uniqueTags
+endfunction
+
+function! IsUnique(uniqueTags, tag)
+    for j in a:uniqueTags
+        if j == a:tag
+            return 0
+        endif
+    endfor
+
+    return 1
+endfunction

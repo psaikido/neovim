@@ -22,8 +22,6 @@ function! JournalEntry() abort
     call append(8, '')
 endfunction
 
-nmap <Leader>je :call JournalEntry()<cr>
-
 "Filter by tag, output to new split
 function! JournalFilter(searchTerm) abort
     call cursor(1,1)
@@ -81,7 +79,7 @@ function! GetTags()
         endfor
     endfor
 
-    echom uniqueTags
+    return uniqueTags
 endfunction
 
 function! IsUnique(uniqueTags, tag)
@@ -93,3 +91,14 @@ function! IsUnique(uniqueTags, tag)
 
     return 1
 endfunction
+
+function! ChooseATag()
+    let tags = GetTags()
+    let choiceString = join(tags, "\n&")
+    let choice = confirm('tag?', choiceString, '', 'Q')
+    call JournalFilter(tags[choice - 1])
+endfunction
+
+nmap <Leader>je :call JournalEntry()<cr>
+nmap <Leader>jt :call ChooseATag()<cr>
+

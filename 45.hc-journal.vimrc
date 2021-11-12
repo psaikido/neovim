@@ -1,3 +1,10 @@
+augroup markdown_settings " {
+	autocmd!
+	autocmd FileType markdown :set linebreak
+    autocmd FileType markdown nmap <LocalLeader>je :call JournalEntry()<cr>
+    autocmd FileType markdown nmap <LocalLeader>jt :call ChooseATag()<cr>
+augroup END " }
+
 "Boilerplate for a new journal entry
 function! JournalEntry() abort
     "Increment the id.

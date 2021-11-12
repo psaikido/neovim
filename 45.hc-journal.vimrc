@@ -4,8 +4,8 @@ augroup markdown_settings " {
 	autocmd FileType markdown :set nohls
     autocmd FileType markdown nmap <Leader>je :call JournalEntry()<cr>
     autocmd FileType markdown nmap <Leader>jt :call ChooseATag()<cr>
-	autocmd FileType markdown nnoremap <Leader>jd :execute "normal! /^---$\rzt:nohls\r"<cr>
-	autocmd FileType markdown nnoremap <Leader>ju :execute "normal! ?^---$\rzt:nohls\r"<cr>
+	autocmd FileType markdown nnoremap <Leader>jd :execute "normal! /^---$\rzt:nohlsearch\r"<cr>
+	autocmd FileType markdown nnoremap <Leader>ju :execute "normal! ?^---$\rzt:nohlsearch\r"<cr>
 augroup END " }
 
 "Boilerplate for a new journal entry

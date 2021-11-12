@@ -25,26 +25,28 @@ endfunction
 "Filter by tag, output to new split
 function! JournalFilter(searchTerm) abort
     call cursor(1,1)
-    let str = 'tags: ' . a:searchTerm
+    let str = 'tags:.*' . a:searchTerm
+    let matches = []
 
-    let tmp = []
     "clear register 'a' 
     normal! qaq
-    execute 'g/' . str . '/call add(tmp, line("."))'
+    execute 'g/' . str . '/call add(matches, line("."))'
 
-    for i in tmp
-        call GetSurroundingEntry(i) 
+    for m in matches
+        call GetSurroundingEntry(m) 
     endfor
 
-    call OutputFilteredResults(@a)
+    call OutputFilteredResults()
 endfunction
 
 function! GetSurroundingEntry(lineNumber) abort
     call cursor(a:lineNumber, 1)
+    "Go to first blank line above, select to next block and save in register
+    "'a'
     normal! {jV/---k"Ay
 endfunction
 
-function! OutputFilteredResults(res) abort
+function! OutputFilteredResults() abort
     setlocal splitright
     set filetype=markdown
     set buftype=nofile
@@ -53,7 +55,7 @@ function! OutputFilteredResults(res) abort
     set buftype=
 endfunction
 
-function! GetTags()
+function! GetTags() abort
     call cursor(1,1)
     let tags = 'tags: '
     let tag = ''
@@ -82,7 +84,7 @@ function! GetTags()
     return uniqueTags
 endfunction
 
-function! IsUnique(uniqueTags, tag)
+function! IsUnique(uniqueTags, tag) abort
     for j in a:uniqueTags
         if j == a:tag
             return 0

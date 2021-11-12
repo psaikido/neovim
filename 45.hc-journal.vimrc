@@ -51,8 +51,8 @@ function! OutputFilteredResults() abort
     set filetype=markdown
     set buftype=nofile
     vsplit filter_journal.md
-    normal! "ap
-    set buftype=
+    normal! ggVGd"ap
+    setlocal buftype=
 endfunction
 
 function! GetTags() abort
@@ -100,7 +100,4 @@ function! ChooseATag()
     let choice = confirm('tag?', choiceString, '', 'Q')
     call JournalFilter(tags[choice - 1])
 endfunction
-
-nmap <Leader>je :call JournalEntry()<cr>
-nmap <Leader>jt :call ChooseATag()<cr>
 

@@ -3,3 +3,4 @@ augroup markdown_settings " {
 	autocmd!
 	autocmd FileType markdown :set linebreak
 augroup END " }
+

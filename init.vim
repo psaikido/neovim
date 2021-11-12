@@ -2,7 +2,6 @@ filetype off
 
 source $HOME/dotfiles/neovim/10.main.vimrc
 source $HOME/dotfiles/neovim/20.plugins.vimrc
-source $HOME/dotfiles/neovim/30.keyMappings.vimrc
 source $HOME/dotfiles/neovim/plugin-config/10.ale.vimrc
 source $HOME/dotfiles/neovim/plugin-config/20.fugitive.vimrc
 source $HOME/dotfiles/neovim/plugin-config/30.fzf.vimrc
@@ -14,6 +13,7 @@ source $HOME/dotfiles/neovim/plugin-config/70.phpfolding.vimrc
 source $HOME/dotfiles/neovim/plugin-config/80.vdebug.vimrc
 source $HOME/dotfiles/neovim/plugin-config/90.vim-largefile.vimrc
 source $HOME/dotfiles/neovim/plugin-config/910.which-key.vimrc
+source $HOME/dotfiles/neovim/30.hc-keyMappings.vimrc
 source $HOME/dotfiles/neovim/40.hc-utils.vimrc
 source $HOME/dotfiles/neovim/45.hc-journal.vimrc
 source $HOME/dotfiles/neovim/50.javascript.vimrc

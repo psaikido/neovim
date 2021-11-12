@@ -21,3 +21,10 @@ nnoremap <c-d>d ddp
 
 "Switch with line above
 nnoremap <c-u>u ddkP
+
+"Come out of insert mode back to normal mode as though hitting 'escape'.
+:inoremap jk <esc>
+"Turn off the old way to force use of the new one above.
+:inoremap <esc> <nop>
+
+:autocmd BufReadPre * :echom 'Om mani padme hum!'

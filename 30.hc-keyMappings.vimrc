@@ -14,7 +14,7 @@ imap <C-s> <Esc>:w<CR>
 nmap <C-c> :q<CR>
 
 "Use escape key to turn off highlight after a search
-nnoremap <esc> :noh<return><esc>
+nnoremap <space> :nohlsearch<return><esc>
 
 "Switch with line below
 nnoremap <c-d>d ddp
@@ -23,6 +23,6 @@ nnoremap <c-d>d ddp
 nnoremap <c-u>u ddkP
 
 "Come out of insert mode back to normal mode as though hitting 'escape'.
-:inoremap kj <esc>
+inoremap kj <esc>
 "Turn off the old way to force use of the new one above.
-:inoremap <esc> <nop>
+inoremap <esc> <nop>

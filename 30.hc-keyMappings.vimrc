@@ -14,7 +14,7 @@ imap <C-s> <Esc>:w<CR>
 nmap <C-c> :q<CR>
 
 "Use escape key to turn off highlight after a search
-nnoremap <space> :nohlsearch<return><esc>
+nnoremap <Esc> :nohlsearch<return><esc>
 
 "Switch with line below
 nnoremap <c-d>d ddp

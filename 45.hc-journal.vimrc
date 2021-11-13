@@ -59,7 +59,7 @@ endfunction
 function! OutputFilteredResults() abort
     setlocal splitright
     set filetype=markdown
-    set buftype=nofile
+    "set buftype=nofile
     vsplit filter_journal.md
     normal! ggVGd"ap
     setlocal buftype=
@@ -85,8 +85,9 @@ function! GetTags() abort
         let lump = split(tag, ',')
 
         for item in lump
-            if IsUnique(uniqueTags, item)
-                call add(uniqueTags, item)
+            let t = trim(item)
+            if IsUnique(uniqueTags, t)
+                call add(uniqueTags, t)
             endif
         endfor
     endfor

@@ -1,5 +1,3 @@
-let g:mapleader = ";"
-
 "Zoom in on window
 nmap <Leader>z <C-W>_<C-W><Bar><CR>
 

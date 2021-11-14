@@ -1,17 +1,17 @@
 let g:mapleader = ";"
 
 "Zoom in on window
-nmap <Leader>z <C-W>_<C-W><Bar><CR>
+nnoremap <Leader>z <C-W>_<C-W><Bar><CR>
 
 "Source the config files
-nmap <Leader>r :so $MYVIMRC<CR>
+nnoremap <Leader>r :so $MYVIMRC<CR>
 
 "Save
-nmap <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
 
 "Close
-nmap <C-c> :q<CR>
+nnoremap <C-c> :q<CR>
 
 "Use escape key to turn off highlight after a search
 nnoremap <Esc> :nohlsearch<return><esc>

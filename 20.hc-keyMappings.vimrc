@@ -26,3 +26,9 @@ nnoremap <c-u>u ddkP
 inoremap kj <esc>
 "Turn off the old way to force use of the new one above.
 inoremap <esc> <nop>
+
+"Quickfix
+nnoremap <leader>qo :copen<cr>
+nnoremap <leader>qc :cclose<cr>
+nnoremap <leader>qn :cnext<cr>
+nnoremap <leader>qp :cprev<cr>

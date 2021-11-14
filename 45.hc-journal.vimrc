@@ -2,14 +2,14 @@ augroup markdown_settings " {
 	autocmd!
 	autocmd FileType markdown :set linebreak
 	autocmd FileType markdown :set nohls
-    autocmd FileType markdown nmap <Leader>je :call JournalEntry()<cr>
-    autocmd FileType markdown nmap <Leader>jt :call ChooseATag()<cr>
+    autocmd FileType markdown nmap <Leader>je :call <SID>JournalEntry()<cr>
+    autocmd FileType markdown nmap <Leader>jt :call <SID>ChooseATag()<cr>
 	autocmd FileType markdown nnoremap <Leader>jd :execute "normal! /^---$\rzt:nohlsearch\r"<cr>
 	autocmd FileType markdown nnoremap <Leader>ju :execute "normal! ?^---$\rzt:nohlsearch\r"<cr>
 augroup END " }
 
 "Boilerplate for a new journal entry
-function! JournalEntry() abort
+function! s:JournalEntry() abort
     "Increment the id.
     "First find the last one and yank it into register '0'.
     "Once found, increment and save it to insert later.
@@ -33,7 +33,7 @@ function! JournalEntry() abort
 endfunction
 
 "Filter by tag, output to new split
-function! JournalFilter(searchTerm) abort
+function! s:JournalFilter(searchTerm) abort
     call cursor(1,1)
     let str = 'tags:.*' . a:searchTerm
     let matches = []
@@ -43,20 +43,20 @@ function! JournalFilter(searchTerm) abort
     execute 'g/' . str . '/call add(matches, line("."))'
 
     for m in matches
-        call GetSurroundingEntry(m) 
+        call s:GetSurroundingEntry(m) 
     endfor
 
-    call OutputFilteredResults()
+    call s:OutputFilteredResults()
 endfunction
 
-function! GetSurroundingEntry(lineNumber) abort
+function! s:GetSurroundingEntry(lineNumber) abort
     call cursor(a:lineNumber, 1)
     "Go to first blank line above, select to next block and save in register
     "'a'
     normal! {jV/---k"Ay
 endfunction
 
-function! OutputFilteredResults() abort
+function! s:OutputFilteredResults() abort
     setlocal splitright
     set filetype=markdown
     "set buftype=nofile
@@ -65,7 +65,7 @@ function! OutputFilteredResults() abort
     setlocal buftype=
 endfunction
 
-function! GetTags() abort
+function! s:GetTags() abort
     call cursor(1,1)
     let tags = 'tags: '
     let tag = ''
@@ -86,7 +86,7 @@ function! GetTags() abort
 
         for item in lump
             let t = trim(item)
-            if IsUnique(uniqueTags, t)
+            if s:IsUnique(uniqueTags, t)
                 call add(uniqueTags, t)
             endif
         endfor
@@ -95,7 +95,7 @@ function! GetTags() abort
     return uniqueTags
 endfunction
 
-function! IsUnique(uniqueTags, tag) abort
+function! s:IsUnique(uniqueTags, tag) abort
     for j in a:uniqueTags
         if j == a:tag
             return 0
@@ -105,10 +105,10 @@ function! IsUnique(uniqueTags, tag) abort
     return 1
 endfunction
 
-function! ChooseATag()
-    let tags = GetTags()
+function! s:ChooseATag()
+    let tags = s:GetTags()
     let choiceString = join(tags, "\n&")
     let choice = confirm('tag?', choiceString, '', 'Q')
-    call JournalFilter(tags[choice - 1])
+    call s:JournalFilter(tags[choice - 1])
 endfunction
 

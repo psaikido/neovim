@@ -32,3 +32,7 @@ nnoremap <leader>qo :copen<cr>
 nnoremap <leader>qc :cclose<cr>
 nnoremap <leader>qn :cnext<cr>
 nnoremap <leader>qp :cprev<cr>
+
+"Toggle spell 
+nnoremap <leader>sp :set spell<cr>
+nnoremap <leader>sn :set nospell<cr>

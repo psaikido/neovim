@@ -2,6 +2,7 @@ filetype off
 
 source $HOME/dotfiles/neovim/10.main.vimrc
 source $HOME/dotfiles/neovim/20.plugins.vimrc
+source $HOME/dotfiles/neovim/plugin-config/05.airline.vimrc
 source $HOME/dotfiles/neovim/plugin-config/10.ale.vimrc
 source $HOME/dotfiles/neovim/plugin-config/20.fugitive.vimrc
 source $HOME/dotfiles/neovim/plugin-config/30.fzf.vimrc

@@ -3,6 +3,8 @@
 set rtp+=~/.config/nvim/bundle/Vundle.vim/
 
 call vundle#begin()
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 Plugin 'mattn/emmet-vim'
 Plugin 'fugitive.vim'
@@ -10,7 +12,6 @@ Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'iamcco/markdown-preview.nvim' 
 Plugin 'iCyMind/NeoSolarized'
-Plugin 'cloudhead/neovim-fuzzy'
 Plugin 'scrooloose/nerdtree'
 Plugin 'norcalli/nvim-colorizer.lua'
 Plugin 'phpfolding.vim'

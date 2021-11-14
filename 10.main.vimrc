@@ -15,5 +15,3 @@ filetype plugin on
 let g:loaded_python_provider = 0
 let g:python3_host_prog = '/usr/bin/python3'
 set pyxversion=3
-
-let g:mapleader = ";"

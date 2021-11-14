@@ -2,6 +2,7 @@ augroup markdown_settings " {
 	autocmd!
 	autocmd FileType markdown :set linebreak
 	autocmd FileType markdown :set nohls
+	autocmd FileType markdown :set nospell
     autocmd FileType markdown nmap <Leader>je :call <SID>JournalEntry()<cr>
     autocmd FileType markdown nmap <Leader>jt :call <SID>ChooseATag()<cr>
 	autocmd FileType markdown nnoremap <Leader>jd :execute "normal! /^---$\rzt:nohlsearch\r"<cr>

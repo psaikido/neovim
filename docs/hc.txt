@@ -1,11 +1,15 @@
 *hc.txt* - hughie's vim notes
 
 ===
+SETUP:
+
 Edit this file at $HOME/dotfiles/neovim/docs/hc.txt
 Create ~/.config/nvim/doc if it's not there already.
 Make a link eg:
 ln -s ~/dotfiles/neovim/docs/hc.txt ~/.config/nvim/doc/hc.txt
 run :helptags ~/.config/nvim/doc/
+This file should then show up with:
+:h hc.txt
 ===
 
 delete all whitespace at the beginning of a string

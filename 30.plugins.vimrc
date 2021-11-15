@@ -3,23 +3,22 @@
 set rtp+=~/.config/nvim/bundle/Vundle.vim/
 
 call vundle#begin()
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'w0rp/ale'
-Plugin 'mattn/emmet-vim'
-Plugin 'fugitive.vim'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'iamcco/markdown-preview.nvim' 
-Plugin 'iCyMind/NeoSolarized'
-Plugin 'scrooloose/nerdtree'
-Plugin 'norcalli/nvim-colorizer.lua'
-Plugin 'phpfolding.vim'
-Plugin 'joonty/vdebug'
-Plugin 'jreybert/vim-largefile'
-Plugin 'gmarik/vundle'
-Plugin 'folke/which-key.nvim'
+Plugin 'vim-airline/vim-airline' "status line
+Plugin 'vim-airline/vim-airline-themes' "status line colours
+Plugin 'fugitive.vim' "git integrations
+Plugin 'junegunn/fzf' "fuzzyfinder
+Plugin 'junegunn/fzf.vim' "fuzzyfinder integrations for vim
+Plugin 'morhetz/gruvbox' "colours scheme for logging in as root
+Plugin 'https://bitbucket.org/psaikido/lifetrak-vim' "my testing
+Plugin 'iamcco/markdown-preview.nvim'  "on the fly markdown in a browser
+Plugin 'iCyMind/NeoSolarized' "theme
+Plugin 'scrooloose/nerdtree' "file browser
+Plugin 'norcalli/nvim-colorizer.lua' "realtime colouring in source files
+Plugin 'phpfolding.vim' "fold php functions
+Plugin 'joonty/vdebug' "php debugging
+Plugin 'jreybert/vim-largefile' "allows editing of massive files
+Plugin 'VundleVim/Vundle.vigmarikm' "plugin manager
+Plugin 'folke/which-key.nvim' "utility for keymappings
 call vundle#end()
 filetype plugin indent on
 "Go :PluginInstall to get the plugins.

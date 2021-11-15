@@ -1,3 +1,3 @@
 "fugitive - invoke git status
-map <Leader>g :Gstatus<CR>
+map <Leader>g :Git<CR>
 

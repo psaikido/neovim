@@ -11,6 +11,7 @@ Plug 'junegunn/fzf' "fuzzyfinder
 Plug 'junegunn/fzf.vim' "fuzzyfinder integrations for vim
 Plug 'morhetz/gruvbox' "colours scheme for logging in as root
 "Plug 'https://bitbucket.org/psaikido/lifetrak-vim' "my testing
+Plug '~/code/lifetrak/lifetrak-vim'
 Plug 'iamcco/markdown-preview.nvim'  "on the fly markdown in a browser
 Plug 'iCyMind/NeoSolarized' "theme
 Plug 'scrooloose/nerdtree' "file browser

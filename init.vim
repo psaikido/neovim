@@ -7,7 +7,8 @@ source $HOME/dotfiles/neovim/plugin-config/05.airline.vimrc
 source $HOME/dotfiles/neovim/plugin-config/10.ale.vimrc
 source $HOME/dotfiles/neovim/plugin-config/20.fugitive.vimrc
 source $HOME/dotfiles/neovim/plugin-config/30.fzf.vimrc
-source $HOME/dotfiles/neovim/plugin-config/31.markdown-preview.vimrc
+source $HOME/dotfiles/neovim/plugin-config/32.lifetrak.vimrc
+source $HOME/dotfiles/neovim/plugin-config/35.markdown-preview.vimrc
 source $HOME/dotfiles/neovim/plugin-config/40.NeoSolarized.vimrc
 source $HOME/dotfiles/neovim/plugin-config/50.nerdtree.vimrc
 source $HOME/dotfiles/neovim/plugin-config/60.nvim-colorizer.vimrc
@@ -16,7 +17,6 @@ source $HOME/dotfiles/neovim/plugin-config/80.vdebug.vimrc
 source $HOME/dotfiles/neovim/plugin-config/90.vim-largefile.vimrc
 source $HOME/dotfiles/neovim/plugin-config/910.which-key.vimrc
 source $HOME/dotfiles/neovim/40.hc-utils.vimrc
-source $HOME/dotfiles/neovim/45.hc-journal.vimrc
 source $HOME/dotfiles/neovim/50.javascript.vimrc
 source $HOME/dotfiles/neovim/60.sanskrit.vim
 source $HOME/dotfiles/neovim/70.snippets.vimrc

@@ -15,10 +15,10 @@ local keymap = function(key)
 end
 
 -- General Usage
-keymap {'n', '<C-s>', ':w<CR>', ''}
-keymap {'n', '<C-c>', ':q<CR>', ''}
-keymap {'n', '<Esc>', ':nohlsearch<CR>', ''}
-keymap {'i', 'kj', '<Esc>', ''}
+keymap {'n', '<C-s>', ':w<CR>'}
+keymap {'n', '<C-c>', ':q<CR>'}
+keymap {'n', '<Esc>', ':nohlsearch<CR>'}
+keymap {'i', 'kj', '<Esc>'}
 -- Consider files of 10Mg and above as 'large'
 vim.g.LargeFile = 1
 
@@ -27,7 +27,7 @@ vim.g.airline_theme = 'solarized'
 vim.g.airline_solarized_bg = 'dark'
 
 -- fugitive - invoke git status
-keymap {'n', '<Leader>g', ':Git<CR>', ''}
+keymap {'n', '<Leader>g', ':Git<CR>'}
 
 -- FuzzyFinder FZF
 -- Requires Ag (silver) installing from the SilverSearcher
@@ -36,24 +36,24 @@ keymap {'n', '<Leader>g', ':Git<CR>', ''}
 -- Use ;* for the same but look for the word under the cursor.
 -- Use ;ah to search from the home directory.
 -- Because I've put a .gitignore in $HOME it controls what dirs get looked at.
-keymap {'n', '<Leader>a', ':Ag<CR>', ''}
+keymap {'n', '<Leader>a', ':Ag<CR>'}
 
 -- Lifetrak
 vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 
 -- Markdown preview
-keymap {'n', '<Leader>mkp', ':MarkdownPreview<CR>', ''}
-keymap {'n', '<Leader>mks', ':MarkdownPreviewStop<CR>', ''}
-keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>', ''}
+keymap {'n', '<Leader>mkp', ':MarkdownPreview<CR>'}
+keymap {'n', '<Leader>mks', ':MarkdownPreviewStop<CR>'}
+keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>'}
 
 -- NeoSolarized
 vim.cmd('colorscheme NeoSolarized')
 vim.cmd('set background=dark')
 
 -- NERDTree
-keymap {'n', '<leader>e', ':NERDTree<CR>', ''}
-keymap {'n', '<leader>s', ':NERDTreeFind<CR>', ''}
-keymap {'n', '<leader>b', ':Bookmark<CR>', ''}
+keymap {'n', '<leader>e', ':NERDTree<CR>'}
+keymap {'n', '<leader>s', ':NERDTreeFind<CR>'}
+keymap {'n', '<leader>b', ':Bookmark<CR>'}
 vim.cmd('let NERDTreeShowBookmarks = 1')
 vim.cmd('let NERDTreeMinimalUI = 1')
 
@@ -61,8 +61,8 @@ vim.cmd('let NERDTreeMinimalUI = 1')
 require'colorizer'.setup()
 
 -- terminal
-keymap {'n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>', ''}
-keymap {'t', '<Esc', '<C-\\><C-n>', ''}
+keymap {'n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>'}
+keymap {'t', '<Esc>', '<C-\\><C-n>'}
 
 -- which-key
 require("which-key").setup {}

@@ -15,12 +15,12 @@ vim.wo.signcolumn     = 'no'	-- Sign Column
 vim.o.syntax          = 'on'
 
 -- Behavior
-vim.o.hlsearch        = true 	-- Set highlight on search
+vim.o.hlsearch        = false 	-- Set highlight on search
 vim.o.ignorecase      = true 	-- Case insensitive searching 
 vim.o.smartcase       = true	-- If Upper Case Char > case sensitive search
-vim.o.smarttab       = true	-- Smart Tabs
+vim.o.smarttab        = true	-- Smart Tabs
 vim.o.smartindent     = true 	-- Smart Indenting
-vim.o.splitbelow      = true 	-- Force Split Below
+vim.o.splitbelow      = false 	-- Force Split Below
 vim.o.splitright      = true 	-- Force Split Right
 vim.o.expandtab       = true
 vim.o.tabstop         = 4	    -- Tabstop 

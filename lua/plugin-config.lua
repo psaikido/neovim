@@ -19,6 +19,8 @@ keymap {'n', '<C-s>', ':w<CR>', ''}
 keymap {'n', '<C-c>', ':q<CR>', ''}
 keymap {'n', '<Esc>', ':nohlsearch<CR>', ''}
 keymap {'i', 'kj', '<Esc>', ''}
+-- Consider files of 10Mg and above as 'large'
+vim.g.LargeFile = 1
 
 -- Airline
 vim.g.airline_theme = 'solarized'
@@ -58,8 +60,9 @@ vim.cmd('let NERDTreeMinimalUI = 1')
 -- nvim-colorizer
 require'colorizer'.setup()
 
--- Consider files of 10Mg and above as 'large'
-vim.g.LargeFile = 1
+-- terminal
+keymap {'n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>', ''}
+keymap {'t', '<Esc', '<C-\\><C-n>', ''}
 
 -- which-key
 require("which-key").setup {}

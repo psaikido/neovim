@@ -64,6 +64,12 @@ require'colorizer'.setup()
 keymap {'n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>'}
 keymap {'t', '<Esc>', '<C-\\><C-n>'}
 
+-- vimwiki
+vim.cmd("let g:vimwiki_list = [{'path': '~/crypt/vimwiki/'}]")
+keymap {'n', '<leader>w<leader>h', ':VimwikiSplitLink<cr>'}
+keymap {'n', '<leader>w<leader>v', ':VimwikiVSplitLink<cr>'}
+
+
 -- which-key
 require("which-key").setup {}
 vim.cmd('set timeoutlen=500')

@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
     use {"norcalli/nvim-colorizer.lua"}
     use {"joonty/vdebug"}
     use {"jreybert/vim-largefile"}
+    use {'vimwiki/vimwiki'}
     use {"folke/which-key.nvim"}
 
   -- Automatically set up your configuration after cloning packer.nvim

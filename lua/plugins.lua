@@ -6,22 +6,44 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function(use)
-    use {"wbthomason/packer.nvim"}
-    use {"vim-airline/vim-airline"}
-    use {"vim-airline/vim-airline-themes"}
-    use {"tpope/vim-fugitive"}
-    use {"junegunn/fzf"}
-    use {"junegunn/fzf.vim"}
-    use {"morhetz/gruvbox"}
-    use {"~/code/lifetrak/lifetrak-vim"}
-    use {"iamcco/markdown-preview.nvim"}
-    use {"iCyMind/NeoSolarized"}
-    use {"scrooloose/nerdtree"}
-    use {"norcalli/nvim-colorizer.lua"}
-    use {"joonty/vdebug"}
-    use {"jreybert/vim-largefile"}
+    use {'wbthomason/packer.nvim'}
+    use {'vim-airline/vim-airline'}
+    use {'vim-airline/vim-airline-themes'}
+
+    use {
+        'neoclide/coc.nvim',
+        branch = 'release'
+    }
+
+    use {'tpope/vim-fugitive'}
+
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    use {'nvim-telescope/telescope-fzf-native.nvim'}
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
+    use {'morhetz/gruvbox'}
+    use {'~/code/lifetrak/lifetrak-vim'}
+
+    use {
+        'iamcco/markdown-preview.nvim',
+        config = "vim.call('mkdp#util#install')"
+    }
+
+    use {'iCyMind/NeoSolarized'}
+    use {'scrooloose/nerdtree'}
+    use {'norcalli/nvim-colorizer.lua'}
+    use {'joonty/vdebug'}
+    use {'jreybert/vim-largefile'}
     use {'vimwiki/vimwiki'}
-    use {"folke/which-key.nvim"}
+    use {'folke/which-key.nvim'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

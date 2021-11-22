@@ -26,22 +26,17 @@ vim.g.LargeFile = 1
 vim.g.airline_theme = 'solarized'
 vim.g.airline_solarized_bg = 'dark'
 
+-- Coc
+keymap {'n', '<leader>c', '<Cmd>CocCommand explorer<cr>'}
+
 -- fugitive - invoke git status
 keymap {'n', '<Leader>g', ':Git<CR>'}
-
--- FuzzyFinder FZF
--- Requires Ag (silver) installing from the SilverSearcher
--- :help fzf-vim
--- Use ;a to search in whatever dir the current working directory is in.
--- Use ;* for the same but look for the word under the cursor.
--- Use ;ah to search from the home directory.
--- Because I've put a .gitignore in $HOME it controls what dirs get looked at.
-keymap {'n', '<Leader>a', ':Ag<CR>'}
 
 -- Lifetrak
 vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 
 -- Markdown preview
+-- run after install if it doesn't happen automatically - :call mkdp#util#install()'})
 keymap {'n', '<Leader>mkp', ':MarkdownPreview<CR>'}
 keymap {'n', '<Leader>mks', ':MarkdownPreviewStop<CR>'}
 keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>'}
@@ -60,15 +55,21 @@ vim.cmd('let NERDTreeMinimalUI = 1')
 -- nvim-colorizer
 require'colorizer'.setup()
 
+-- telescope
+keymap { 'n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>' }
+keymap { 'n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>' }
+keymap { 'n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>' }
+keymap { 'n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>' }
+keymap { 'n', '<leader>f~', '<cmd>lua require("telescope.builtin").file_browser({cwd="/home/hughie/"})<cr>' }
+
 -- terminal
 keymap {'n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>'}
 keymap {'t', '<Esc>', '<C-\\><C-n>'}
 
 -- vimwiki
-vim.cmd("let g:vimwiki_list = [{'path': '~/crypt/vimwiki/'}]")
+vim.cmd("let g:vimwiki_list = [{'path': '~/crypt/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]")
 keymap {'n', '<leader>w<leader>h', ':VimwikiSplitLink<cr>'}
 keymap {'n', '<leader>w<leader>v', ':VimwikiVSplitLink<cr>'}
-
 
 -- which-key
 require("which-key").setup {}

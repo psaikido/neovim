@@ -13,6 +13,7 @@ vim.o.title           = true    -- Display File Info on Title
 vim.o.showmode        = false	-- Don't Show MODES
 vim.wo.signcolumn     = 'no'	-- Sign Column
 vim.o.syntax          = 'on'
+vim.o.autoindent      = true
 
 -- Behavior
 vim.o.hlsearch        = false 	-- Set highlight on search
@@ -26,8 +27,8 @@ vim.o.expandtab       = true
 vim.o.tabstop         = 4	    -- Tabstop 
 vim.o.softtabstop     = 4
 vim.o.shiftwidth      = 4
-vim.o.scrolloff       = 12  	    -- Vertical Scroll Offset
-vim.o.sidescrolloff   = 8  	    -- Horizontal Scroll Offset
+vim.o.scrolloff       = 0  	    -- Vertical Scroll Offset
+vim.o.sidescrolloff   = 0  	    -- Horizontal Scroll Offset
 vim.o.mouse           = 'a'	    -- Enable mouse mode
 
 -- Vim specific

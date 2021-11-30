@@ -19,15 +19,13 @@ keymap {'n', '<C-s>', ':w<CR>'}
 keymap {'n', '<C-c>', ':q<CR>'}
 keymap {'n', '<Esc>', ':nohlsearch<CR>'}
 keymap {'i', 'kj', '<Esc>'}
+
 -- Consider files of 10Mg and above as 'large'
 vim.g.LargeFile = 1
 
 -- Airline
 vim.g.airline_theme = 'solarized'
 vim.g.airline_solarized_bg = 'dark'
-
--- Coc
-keymap {'n', '<leader>c', '<Cmd>CocCommand explorer<cr>'}
 
 -- fugitive - invoke git status
 keymap {'n', '<Leader>g', ':Git<CR>'}

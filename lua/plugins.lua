@@ -10,12 +10,22 @@ return require('packer').startup(function(use)
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
 
-    use {
-        'neoclide/coc.nvim',
-        branch = 'release'
-    }
+    use {'norcalli/nvim-colorizer.lua'}
 
     use {'tpope/vim-fugitive'}
+
+    use {'morhetz/gruvbox'}
+
+    use {'~/code/lifetrak/lifetrak-vim'}
+
+    use {
+        'iamcco/markdown-preview.nvim',
+        config = "vim.call('mkdp#util#install')"
+    }
+
+    use {'iCyMind/NeoSolarized'}
+
+    use {'scrooloose/nerdtree'}
 
     use {
         'nvim-telescope/telescope.nvim',
@@ -29,18 +39,7 @@ return require('packer').startup(function(use)
         run = ':TSUpdate'
     }
 
-    use {'morhetz/gruvbox'}
-    use {'~/code/lifetrak/lifetrak-vim'}
-
-    use {
-        'iamcco/markdown-preview.nvim',
-        config = "vim.call('mkdp#util#install')"
-    }
-
-    use {'iCyMind/NeoSolarized'}
-    use {'scrooloose/nerdtree'}
-    use {'norcalli/nvim-colorizer.lua'}
-    use {'joonty/vdebug'}
+    --use {'joonty/vdebug'}
     use {'jreybert/vim-largefile'}
     use {'vimwiki/vimwiki'}
     use {'folke/which-key.nvim'}

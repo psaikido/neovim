@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     }
 
     use {'iCyMind/NeoSolarized'}
+    use {'EdenEast/nightfox.nvim'}
 
     use {'scrooloose/nerdtree'}
 

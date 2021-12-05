@@ -65,12 +65,14 @@ vim.cmd('let NERDTreeMinimalUI = 1')
 require'colorizer'.setup()
 
 
--- telescope
-keymap { 'n', '<leader>ff', '<cmd>lua require("telescope.builtin").find_files()<cr>' }
-keymap { 'n', '<leader>fg', '<cmd>lua require("telescope.builtin").live_grep()<cr>' }
-keymap { 'n', '<leader>fb', '<cmd>lua require("telescope.builtin").buffers()<cr>' }
-keymap { 'n', '<leader>fh', '<cmd>lua require("telescope.builtin").help_tags()<cr>' }
-keymap { 'n', '<leader>f~', '<cmd>lua require("telescope.builtin").file_browser({cwd="/home/hughie/"})<cr>' }
+-- FuzzyFinder FZF
+-- :help fzf-vim
+-- https://github.com/junegunn/fzf/blob/master/README-VIM.md
+keymap {'n', '<Leader>fh', ':FZF ~<CR>'} -- search from home dir
+keymap {'n', '<Leader>ff', ':FZF<CR>'} -- search all files from pwd
+keymap {'n', '<Leader>fg', ':GFiles<CR>'} -- search git files from pwd
+keymap {'n', '<Leader>fb', ':Buffers<CR>'} -- search buffers
+keymap {'n', '<Leader>fr', ':Rg! <CR>'} -- search inside files with ripgrep
 
 
 -- terminal

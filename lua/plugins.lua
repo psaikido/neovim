@@ -28,17 +28,8 @@ return require('packer').startup(function(use)
 
     use {'scrooloose/nerdtree'}
 
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
-
-    use {'nvim-telescope/telescope-fzf-native.nvim'}
-
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+    use {"junegunn/fzf"}
+    use {"junegunn/fzf.vim"}
 
     --use {'joonty/vdebug'}
     use {'jreybert/vim-largefile'}

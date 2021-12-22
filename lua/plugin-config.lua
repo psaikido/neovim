@@ -48,8 +48,8 @@ keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>'}
 
 -- NeoSolarized
 --vim.cmd('colorscheme NeoSolarized')
---vim.cmd('colorscheme gruvbox')
-vim.cmd('colorscheme nightfox')
+vim.cmd('colorscheme gruvbox')
+--vim.cmd('colorscheme nightfox')
 vim.cmd('set background=dark')
 
 

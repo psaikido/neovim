@@ -39,6 +39,12 @@ keymap {'n', '<Leader>g', ':Git<CR>'}
 vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 
 
+-- LSP
+require('lsp')
+require('nvim-cmp')
+local luasnip = require 'luasnip'
+
+
 -- Markdown preview
 -- run after install if it doesn't happen automatically - :call mkdp#util#install()'})
 keymap {'n', '<Leader>mkp', ':MarkdownPreview<CR>'}

@@ -7,34 +7,43 @@ end
 
 return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
+
+    -- Themes
+    use {'norcalli/nvim-colorizer.lua'}
+    use {'iCyMind/NeoSolarized'}
+    use {'EdenEast/nightfox.nvim'}
+    use {'morhetz/gruvbox'}
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
 
-    use {'norcalli/nvim-colorizer.lua'}
 
+    -- LSP and autocompletions
+    use {'neovim/nvim-lspconfig'}
+    use {'hrsh7th/nvim-cmp'}
+    use {'hrsh7th/cmp-nvim-lsp'}
+    use {'saadparwaiz1/cmp_luasnip'}
+    use {'L3MON4D3/LuaSnip'}
+
+
+    -- Helpers
     use {'tpope/vim-fugitive'}
-
-    use {'morhetz/gruvbox'}
-
-    use {'~/code/lifetrak/lifetrak-vim'}
 
     use {
         'iamcco/markdown-preview.nvim',
         config = "vim.call('mkdp#util#install')"
     }
 
-    use {'iCyMind/NeoSolarized'}
-    use {'EdenEast/nightfox.nvim'}
-
     use {'scrooloose/nerdtree'}
-
     use {"junegunn/fzf"}
     use {"junegunn/fzf.vim"}
+    use {'folke/which-key.nvim'}
 
     --use {'joonty/vdebug'}
     use {'jreybert/vim-largefile'}
     use {'vimwiki/vimwiki'}
-    use {'folke/which-key.nvim'}
+
+    -- HC
+    use {'~/code/lifetrak/lifetrak-vim'}
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

@@ -74,9 +74,9 @@ require'colorizer'.setup()
 -- FuzzyFinder FZF
 -- :help fzf-vim
 -- https://github.com/junegunn/fzf/blob/master/README-VIM.md
+keymap {'n', '<Leader>ff', ':FZF <CR>'} -- search all files from pwd 
 keymap {'n', '<Leader>fh', ':FZF ~<CR>'} -- search from home dir
-keymap {'n', '<Leader>ff', ':FZF<CR>'} -- search all files from pwd
-keymap {'n', '<Leader>fg', ':GFiles<CR>'} -- search git files from pwd
+keymap {'n', '<Leader>fg', ':GFiles<CR>'} -- search git files from git 
 keymap {'n', '<Leader>fb', ':Buffers<CR>'} -- search buffers
 keymap {'n', '<Leader>fr', ':Rg! <CR>'} -- search inside files with ripgrep
 

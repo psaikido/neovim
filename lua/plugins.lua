@@ -33,12 +33,10 @@ return require('packer').startup(function(use)
         config = "vim.call('mkdp#util#install')"
     }
 
-    use {'scrooloose/nerdtree'}
+    use ('kevinhwang91/rnvimr')
     use {"junegunn/fzf"}
     use {"junegunn/fzf.vim"}
     use {'folke/which-key.nvim'}
-    --use {'SirVer/ultisnips'}
-    --use {'honza/vim-snippets'}
 
     use {'joonty/vdebug'}
     use {'jreybert/vim-largefile'}

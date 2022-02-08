@@ -59,12 +59,10 @@ vim.cmd('colorscheme gruvbox')
 vim.cmd('set background=dark')
 
 
--- NERDTree
-keymap {'n', '<leader>e', ':NERDTree<CR>'}
-keymap {'n', '<leader>s', ':NERDTreeFind<CR>'}
-keymap {'n', '<leader>b', ':Bookmark<CR>'}
-vim.cmd('let NERDTreeShowBookmarks = 1')
-vim.cmd('let NERDTreeMinimalUI = 1')
+-- Ranger rnvimr
+keymap {'n', '<leader>e', ':RnvimrToggle<CR>'}
+keymap {'t', '<leader>e', ':RnvimrToggle<CR>'}
+keymap {'n', '<leader>s', ':RnvimrResize<CR>'}
 
 
 -- nvim-colorizer

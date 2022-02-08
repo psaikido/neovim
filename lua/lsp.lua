@@ -32,8 +32,6 @@ local on_attach = function(client, bufnr)
 
 end
 
--- require'lspconfig'.phpactor.setup{}
-
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 'pyright', 'phpactor' }

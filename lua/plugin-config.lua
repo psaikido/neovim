@@ -77,7 +77,15 @@ keymap {'n', '<Leader>fh', ':FZF ~<CR>'} -- search from home dir
 keymap {'n', '<Leader>fg', ':GFiles<CR>'} -- search git files from git 
 keymap {'n', '<Leader>fb', ':Buffers<CR>'} -- search buffers
 keymap {'n', '<Leader>fr', ':Rg! <CR>'} -- search inside files with ripgrep
+--local find_git_root = function()
+  --return vim.fn.system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+--end
 
+-- PHPDocBloc
+keymap {'n', '<Leader>pd', ':PHPDocBlocks <CR>'} -- search inside files with ripgrep
+
+-- startify
+vim.g.startify_change_to_dir = 0 
 
 -- terminal
 keymap {'n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>'}

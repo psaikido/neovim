@@ -35,6 +35,11 @@ return require('packer').startup(function(use)
         config = "vim.call('mkdp#util#install')"
     }
 
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
     use ('kevinhwang91/rnvimr')
     use {"junegunn/fzf"}
     use {"junegunn/fzf.vim"}

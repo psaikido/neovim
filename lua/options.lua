@@ -50,13 +50,13 @@ vim.o.undodir         = vim.fn.stdpath("cache") .. "/undo"
 
 -- Highlight on yank
 vim.api.nvim_exec(
-	[[
-  augroup YankHighlight
-    autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank()
-  augroup end
-]],
-	false
+    [[
+        augroup YankHighlight
+        autocmd!
+        autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+        augroup end
+    ]],
+    false
 )
 
 -- Disable some default plugins
@@ -67,5 +67,7 @@ vim.g.loaded_zipPlugin = false
 vim.g.loaded_man = false
 vim.g.loaded_2html_plugin = false
 vim.g.loaded_remote_plugins = false
+
+
 vim.g.python3_host_prog = "/usr/bin/python"
 

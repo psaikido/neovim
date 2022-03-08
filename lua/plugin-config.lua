@@ -20,6 +20,7 @@ keymap {'n', '<C-s>', ':w<CR>'}
 keymap {'n', '<C-c>', ':q<CR>'}
 keymap {'n', '<Esc>', ':nohlsearch<CR>'}
 keymap {'i', 'kj', '<Esc>'}
+keymap {'n', '<Leader>r', ':source $MYVIMRC<CR>'}
 
 
 -- Consider files of 10Mg and above as 'large'
@@ -118,7 +119,6 @@ vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.wo.foldlevel = 2
 vim.wo.foldnestmax = 2
 vim.g.foldlevelstart = 99
-
 
 -- vimwiki
 vim.cmd("let wiki_tech = {}")

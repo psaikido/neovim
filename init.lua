@@ -1,5 +1,0 @@
-require('options')
-require('plugins')
-require('plugin-config')
-require('lsp')
-require('nvim-cmp')

@@ -4,4 +4,4 @@
 :lua require('lsp')
 :lua require('nvim-cmp')
 
-source $HOME/neovim/utils.vimrc
+source $HOME/neovim/phpfolds.vim

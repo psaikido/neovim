@@ -64,6 +64,7 @@ vim.cmd('set background=dark')
 keymap {'n', '<leader>e', ':RnvimrToggle<CR>'}
 keymap {'t', '<leader>e', ':RnvimrToggle<CR>'}
 keymap {'n', '<leader>s', ':RnvimrResize<CR>'}
+vim.cmd('let g:rnvimr_enable_picker = 1')
 
 
 -- nvim-colorizer
@@ -121,18 +122,18 @@ vim.wo.foldnestmax = 2
 vim.g.foldlevelstart = 99
 
 -- vimwiki
-vim.cmd("let wiki_tech = {}")
-vim.cmd("let wiki_tech.path = '~/crypt/vimwiki/tech/'")
-vim.cmd("let wiki_tech.syntax = 'markdown'")
-vim.cmd("let wiki_tech.ext = 'md'")
-
 vim.cmd("let wiki_hc = {}")
 vim.cmd("let wiki_hc.path = '~/crypt/vimwiki/hc/'")
 vim.cmd("let wiki_hc.syntax = 'markdown'")
 vim.cmd("let wiki_hc.ext = 'md'")
 
+vim.cmd("let wiki_tech = {}")
+vim.cmd("let wiki_tech.path = '~/crypt/vimwiki/tech/'")
+vim.cmd("let wiki_tech.syntax = 'markdown'")
+vim.cmd("let wiki_tech.ext = 'md'")
+
 vim.cmd(
-    "let g:vimwiki_list = [wiki_tech, wiki_hc]"
+    "let g:vimwiki_list = [wiki_hc, wiki_tech]"
 )
 
 keymap {'n', '<leader>w<leader>h', ':VimwikiSplitLink<cr>'}

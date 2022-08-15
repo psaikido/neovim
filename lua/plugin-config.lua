@@ -37,7 +37,7 @@ keymap {'n', '<Leader>g', ':Git<CR>'}
 
 
 -- Lifetrak
-vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
+-- vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 
 
 -- LSP
@@ -97,8 +97,7 @@ keymap {'t', '<Esc>', '<C-\\><C-n>'}
 
 -- treesitter
 require'nvim-treesitter.configs'.setup {
-  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "maintained",
+  ensure_installed = {'php', 'html', 'css', 'markdown'},
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,

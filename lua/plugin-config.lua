@@ -68,8 +68,10 @@ vim.cmd('let g:rnvimr_enable_picker = 1')
 
 
 -- nvim-colorizer
-require'colorizer'.setup()
-
+require 'colorizer'.setup {
+  'css'; 
+  'scss';
+}
 
 -- FuzzyFinder FZF
 -- :help fzf-vim

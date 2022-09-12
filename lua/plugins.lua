@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
     use {'tpope/vim-fugitive'}
     use ('brett-griffin/phpdocblocks.vim')
     use ('mhinz/vim-startify')
+    use ('mattn/emmet-vim')
 
     use {
         'iamcco/markdown-preview.nvim',

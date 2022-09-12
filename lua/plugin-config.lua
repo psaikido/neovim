@@ -43,7 +43,6 @@ vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 -- LSP
 require('lsp')
 require('nvim-cmp')
-local luasnip = require 'luasnip'
 
 
 -- Markdown preview
@@ -97,8 +96,7 @@ keymap {'t', '<Esc>', '<C-\\><C-n>'}
 
 -- treesitter
 require'nvim-treesitter.configs'.setup {
-  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "maintained",
+  ensure_installed = {'php', 'css', 'scss', 'html'},
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -117,7 +115,7 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true,
   },
 }
-vim.wo.foldmethod = "expr"
+vim.wo.foldmethod = "manual"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.wo.foldlevel = 2
 vim.wo.foldnestmax = 2

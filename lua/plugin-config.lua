@@ -20,7 +20,8 @@ keymap {'n', '<C-s>', ':w<CR>'}
 keymap {'n', '<C-c>', ':q<CR>'}
 keymap {'n', '<Esc>', ':nohlsearch<CR>'}
 keymap {'i', 'kj', '<Esc>'}
-keymap {'n', '<Leader>r', ':source $MYVIMRC<CR>'}
+keymap {'n', '<leader>r', ':source $MYVIMRC<CR>'}
+keymap {'n', '<leader>b', '<C-w>|<CR>'}
 
 
 -- Consider files of 10Mg and above as 'large'
@@ -54,8 +55,9 @@ keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>'}
 
 -- NeoSolarized
 --vim.cmd('colorscheme NeoSolarized')
-vim.cmd('colorscheme gruvbox')
+--vim.cmd('colorscheme gruvbox')
 --vim.cmd('colorscheme nightfox')
+vim.cmd('colorscheme dracula')
 vim.cmd('set background=dark')
 
 

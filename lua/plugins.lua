@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use {'morhetz/gruvbox'}
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
+    use {'dracula/vim'}
 
 
     -- LSP and autocompletions

@@ -124,6 +124,8 @@ vim.wo.foldnestmax = 2
 vim.g.foldlevelstart = 99
 
 -- vimwiki
+vim.cmd("let g:vimwiki_global_ext = 0")
+
 vim.cmd("let wiki_hc = {}")
 vim.cmd("let wiki_hc.path = '~/crypt/vimwiki/hc/'")
 vim.cmd("let wiki_hc.syntax = 'markdown'")

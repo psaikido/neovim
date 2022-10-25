@@ -5,3 +5,5 @@
 :lua require('nvim-cmp')
 
 source $HOME/neovim/phpfolds.vim
+
+au BufNewFile,BufRead *.md set filetype=markdown

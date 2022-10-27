@@ -71,3 +71,7 @@ vim.g.loaded_remote_plugins = false
 
 vim.g.python3_host_prog = "/usr/bin/python"
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    command = "setlocal nospell"
+})

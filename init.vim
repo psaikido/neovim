@@ -7,3 +7,5 @@
 source $HOME/neovim/phpfolds.vim
 
 au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.md setlocal nospell
+

@@ -57,6 +57,7 @@ keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>'}
 --vim.cmd('colorscheme NeoSolarized')
 --vim.cmd('colorscheme gruvbox')
 --vim.cmd('colorscheme nightfox')
+vim.cmd('let g:dracula_colorterm = 0')
 vim.cmd('colorscheme dracula')
 vim.cmd('set background=dark')
 

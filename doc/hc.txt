@@ -3,14 +3,19 @@
 ===
 SETUP:
 
-Edit this file at $HOME/dotfiles/neovim/docs/hc.txt
-Create ~/.config/nvim/doc if it's not there already.
-Make a link eg:
-ln -s ~/dotfiles/neovim/docs/hc.txt ~/.config/nvim/doc/hc.txt
+Edit this file at $HOME/neovim/doc/hc.txt
+
+Symlink neovim's config to this neovim dir:
+ln -s ~/neovim ~/.config/nvim
+
 run :helptags ~/.config/nvim/doc/
 This file should then show up with:
 :h hc.txt
 ===
+
+Increment numbers. Select a vertical list of numbers with CTRL-v then motion.
+CTRL-A increments them all, you typically end up with a column of '2's.
+Prefix with a 'g' and they will increment 2,3,4..
 
 delete all whitespace at the beginning of a string
 %s:^\s\+::

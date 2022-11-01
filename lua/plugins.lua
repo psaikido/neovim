@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
     use {"junegunn/fzf"}
     use {"junegunn/fzf.vim"}
     use {'folke/which-key.nvim'}
+    use {'christoomey/vim-tmux-navigator'}
 
     use {'joonty/vdebug'}
     use {'jreybert/vim-largefile'}

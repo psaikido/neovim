@@ -40,7 +40,6 @@ keymap {'n', '<Leader>g', ':Git<CR>'}
 -- Lifetrak
 vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 
-
 -- LSP
 require('lsp')
 require('nvim-cmp')
@@ -51,6 +50,11 @@ require('nvim-cmp')
 keymap {'n', '<Leader>mkp', ':MarkdownPreview<CR>'}
 keymap {'n', '<Leader>mks', ':MarkdownPreviewStop<CR>'}
 keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>'}
+
+
+-- Add two spaces macro for markdown
+-- Put cursor on starting line first and run @s
+vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
 
 
 -- NeoSolarized

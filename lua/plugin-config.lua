@@ -38,7 +38,7 @@ keymap {'n', '<Leader>g', ':Git<CR>'}
 
 
 -- Lifetrak
-vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
+-- vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 
 -- LSP
 require('lsp')

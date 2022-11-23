@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
     use {'vim-airline/vim-airline-themes'}
     use {'dracula/vim'}
 
+    -- Harpoon
+    use {'nvim-lua/plenary.nvim'}
+    use {'ThePrimeagen/harpoon'}
 
     -- LSP and autocompletions
     use {'neovim/nvim-lspconfig'}

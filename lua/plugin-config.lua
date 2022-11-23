@@ -23,6 +23,14 @@ keymap {'i', 'kj', '<Esc>'}
 keymap {'n', '<leader>r', ':source $MYVIMRC<CR>'}
 keymap {'n', '<leader>b', '<C-w>|<CR>'}
 
+-- Harpoon
+local silent = { silent = true }
+keymap {'n', "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', silent}
+keymap {'n', "<leader>j", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', silent}
+keymap {'n', "<leader>ja", ':lua require("harpoon.ui").nav_file(1)<CR>', silent}
+keymap {'n', "<leader>js", ':lua require("harpoon.ui").nav_file(2)<CR>', silent}
+keymap {'n', "<leader>jd", ':lua require("harpoon.ui").nav_file(3)<CR>', silent}
+keymap {'n', "<leader>jf", ':lua require("harpoon.ui").nav_file(4)<CR>', silent}
 
 -- Consider files of 10Mg and above as 'large'
 vim.g.LargeFile = 1

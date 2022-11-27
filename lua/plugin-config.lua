@@ -22,6 +22,8 @@ keymap {'n', '<Esc>', ':nohlsearch<CR>'}
 keymap {'i', 'kj', '<Esc>'}
 keymap {'n', '<leader>r', ':source $MYVIMRC<CR>'}
 keymap {'n', '<leader>b', '<C-w>|<CR>'}
+keymap {'v', 'J', ':m \'>+1<CR>gv=gv'} -- move visual lines down
+keymap {'v', 'K', ':m \'<-2<CR>gv=gv'} -- move visual lines up
 
 -- Harpoon
 local silent = { silent = true }

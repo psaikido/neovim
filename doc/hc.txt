@@ -97,4 +97,20 @@ ctrl-x ctrl-o
 Format json:
 :%!python -m json.tool
 
+One eyed fighting Kirby (?)
+\(.*\)
+..it's a regex that amounts to "anything between"
+so you can use it in substitutions like this:
+say you want to wrap the contents of a div:
+  <div>thing</div>
+:'<,'>s:>\(.*\)<:><span>\1</span><:
+which gives:
+  <div><span>thing</span></div>
+which breaks down as:
+'<,'>s --whatever is visually selected do a substitution (s)
+:>\(.*\)<: --whatever is found between '>' and '<' is matched as \1
+:><span>\1</span><: --substitute the extra text and put in the matched group
+
+
+
 vim:tw=78:ts=2:sts=2:sw=2:ft=help:norl:

@@ -78,4 +78,5 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- macro for adding markdown spaces at end of lines
 -- cursor on first line then @s
+-- https://vim.fandom.com/wiki/Power_of_g
 let @s = ':.,$g!/^\s*$/norm A  '

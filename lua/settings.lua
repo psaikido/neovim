@@ -48,17 +48,6 @@ vim.opt.shortmess:append { W = true, a = true }
 vim.o.undodir         = vim.fn.stdpath("cache") .. "/undo"
 -- stylua: ignore end
 
--- Highlight on yank
-vim.api.nvim_exec(
-    [[
-        augroup YankHighlight
-        autocmd!
-        autocmd TextYankPost * silent! lua vim.highlight.on_yank()
-        augroup end
-    ]],
-    false
-)
-
 -- Disable some default plugins
 vim.g.loaded_gzip = false
 vim.g.loaded_matchit = false
@@ -75,3 +64,15 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     command = "setlocal nospell"
 })
+--
+-- Highlight on yank
+vim.api.nvim_exec(
+    [[
+        augroup YankHighlight
+        autocmd!
+        autocmd TextYankPost * silent! lua vim.highlight.on_yank()
+        augroup end
+    ]],
+    false
+)
+

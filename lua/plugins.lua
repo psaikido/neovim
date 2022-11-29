@@ -89,7 +89,7 @@ function M.setup()
     use {'vimwiki/vimwiki'}
 
     -- HC
-    use {'~/neovim/lifetrak-vim'}
+    use {'~/code/lifetrak/lifetrak-vim'}
 
     if packer_bootstrap then
       print "Restart Neovim required after installation!"

@@ -120,7 +120,7 @@ vim.cmd("let wiki_tech.syntax = 'markdown'")
 vim.cmd("let wiki_tech.ext = 'md'")
 
 vim.cmd(
-    "let g:vimwiki_list = [wiki_hc, wiki_tech]"
+    "let g:vimwiki_list = [wiki_tech, wiki_hc]"
 )
 
 keymap {'n', '<leader>w<leader>h', ':VimwikiSplitLink<cr>'}

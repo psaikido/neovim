@@ -1,21 +1,55 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local M = {}
 
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-end
+function M.setup()
+  -- Indicate first time installation
+  local packer_bootstrap = false
 
-return require('packer').startup(function(use)
-    use {'wbthomason/packer.nvim'}
+  -- packer.nvim configuration
+  local conf = {
+    display = {
+      open_fn = function()
+        return require("packer.util").float { border = "rounded" }
+      end,
+    },
+  }
+
+  -- Check if packer.nvim is installed
+  -- Run PackerCompile if there are changes in this file
+  local function packer_init()
+    local fn = vim.fn
+    local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+    if fn.empty(fn.glob(install_path)) > 0 then
+      packer_bootstrap = fn.system {
+        "git",
+        "clone",
+        "--depth",
+        "1",
+        "https://github.com/wbthomason/packer.nvim",
+        install_path,
+      }
+      vim.cmd [[packadd packer.nvim]]
+    end
+    vim.cmd "autocmd BufWritePost plugins.lua source <afile> | PackerCompile"
+  end
+
+  -- Plugins
+  local function plugins(use)
+    use { "wbthomason/packer.nvim" }
 
     -- Themes
-    use {'norcalli/nvim-colorizer.lua'}
+    use {
+      'norcalli/nvim-colorizer.lua',
+      config = function()
+        require('config.colorizer').setup()
+      end,
+    }
+
     use {'iCyMind/NeoSolarized'}
     use {'EdenEast/nightfox.nvim'}
     use {'morhetz/gruvbox'}
+    use {'dracula/vim'}
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
-    use {'dracula/vim'}
 
     -- Harpoon
     use {'nvim-lua/plenary.nvim'}
@@ -57,10 +91,17 @@ return require('packer').startup(function(use)
     -- HC
     use {'~/neovim/lifetrak-vim'}
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
+    if packer_bootstrap then
+      print "Restart Neovim required after installation!"
+      require("packer").sync()
+    end
   end
-end)
 
+  packer_init()
+
+  local packer = require "packer"
+  packer.init(conf)
+  packer.startup(plugins)
+end
+
+return M

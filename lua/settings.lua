@@ -75,8 +75,3 @@ vim.api.nvim_create_autocmd("FileType", {
     pattern = "markdown",
     command = "setlocal nospell"
 })
-
--- macro for adding markdown spaces at end of lines
--- cursor on first line then @s
--- https://vim.fandom.com/wiki/Power_of_g
-vim.fn.setreg('s', [[:.,$g!/^\s*$/norm A  ]])

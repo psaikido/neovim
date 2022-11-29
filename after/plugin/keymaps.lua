@@ -51,8 +51,8 @@ keymap {'n', '<Leader>g', ':Git<CR>'}
 -- vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
 
 -- LSP
-require('lsp')
-require('nvim-cmp')
+-- require('lsp')
+-- require('nvim-cmp')
 
 
 -- Markdown preview
@@ -84,12 +84,6 @@ vim.cmd('let g:rnvimr_enable_picker = 1')
 vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
 
 
--- nvim-colorizer
-require 'colorizer'.setup {
-  'css'; 
-  'scss';
-}
-
 -- FuzzyFinder FZF
 -- :help fzf-vim
 -- https://github.com/junegunn/fzf/blob/master/README-VIM.md
@@ -111,33 +105,6 @@ vim.g.startify_change_to_dir = 0
 -- terminal
 keymap {'n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>'}
 keymap {'t', '<Esc>', '<C-\\><C-n>'}
-
--- treesitter
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {'php', 'css', 'scss', 'html'},
-
-  -- Install languages synchronously (only applied to `ensure_installed`)
-  sync_install = false,
-
-  highlight = {
-    -- `false` will disable the whole extension
-    enable = true,
-
-    -- list of language that will be disabled
-    disable = { "c", "rust" },
-
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplicate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = true,
-  },
-}
-vim.wo.foldmethod = "manual"
-vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
-vim.wo.foldlevel = 2
-vim.wo.foldnestmax = 2
-vim.g.foldlevelstart = 99
 
 -- vimwiki
 vim.cmd("let g:vimwiki_global_ext = 0")

@@ -53,7 +53,7 @@ function M.setup()
 
     -- Harpoon
     use {'nvim-lua/plenary.nvim'}
-    use {'ThePrimeagen/harpoon'}
+    use {'psaikido/harpoon'}
 
     -- LSP and autocompletions
     use {'neovim/nvim-lspconfig'}
@@ -64,9 +64,9 @@ function M.setup()
     -- Helpers
     use {'tpope/vim-fugitive'}
     use {'tpope/vim-commentary'}
-    use ('brett-griffin/phpdocblocks.vim')
-    use ('mhinz/vim-startify')
-    use ('mattn/emmet-vim')
+    use {'brett-griffin/phpdocblocks.vim'}
+    use {'mhinz/vim-startify'}
+    use {'mattn/emmet-vim'}
 
     use {
         'iamcco/markdown-preview.nvim',
@@ -78,7 +78,7 @@ function M.setup()
         run = ':TSUpdate'
     }
 
-    use ('kevinhwang91/rnvimr')
+    use {'kevinhwang91/rnvimr'}
     use {"junegunn/fzf"}
     use {"junegunn/fzf.vim"}
     use {'folke/which-key.nvim'}

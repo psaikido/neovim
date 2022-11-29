@@ -27,7 +27,7 @@ vim.o.expandtab       = true
 vim.o.tabstop         = 4	    -- Tabstop 
 vim.o.softtabstop     = 4
 vim.o.shiftwidth      = 4
-vim.o.scrolloff       = 0  	    -- Vertical Scroll Offset
+vim.o.scrolloff       = 3  	    -- Vertical Scroll Offset
 vim.o.sidescrolloff   = 0  	    -- Horizontal Scroll Offset
 vim.o.mouse           = 'a'	    -- Enable mouse mode
 

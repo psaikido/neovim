@@ -41,14 +41,20 @@ function M.setup()
     use { "nvim-telescope/telescope-fzf-native.nvim" }
     use { "BurntSushi/ripgrep" }
     use { "sharkdp/fd" }
+
+
+    -- Navigation
+    use { "psaikido/harpoon" }
+    use { "kevinhwang91/rnvimr" }
+
+
+    -- LSP - Treesitter
     use { "neovim/nvim-lspconfig" }
     use { "hrsh7th/nvim-cmp" }
     use { "hrsh7th/cmp-nvim-lsp" }
     use {
         "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate"
     }
-    use { "psaikido/harpoon" }
 
 
     -- Helpers
@@ -72,15 +78,11 @@ function M.setup()
     use { "dracula/vim" }
     use { "vim-airline/vim-airline" }
     use { "vim-airline/vim-airline-themes" }
-    -- use {
-    --   'norcalli/nvim-colorizer.lua',
-    --   config = function()
-    --     require('config.colorizer').setup()
-    --   end,
-    -- }
+    use { "norcalli/nvim-colorizer.lua" }
 
     -- HC
-    --use { "~/code/lifetrak/lifetrak-vim" }
+    use { "~/code/lifetrak/lifetrak-vim" }
+        run = ":TSUpdate"
     
     if packer_bootstrap then
       print "Restart Neovim required after installation!"

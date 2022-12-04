@@ -14,6 +14,15 @@ vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {}) -- move visual lines down
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {}) -- move visual lines up
 
 
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ffh',  ':lua require("config.telescope").home_find()<cr>', {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+
 -- Harpoon
 local silent = { silent = true }
 vim.keymap.set('n', "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', silent, {})
@@ -23,6 +32,11 @@ vim.keymap.set('n', "<leader>js", ':lua require("harpoon.ui").nav_file(2)<CR>', 
 vim.keymap.set('n', "<leader>jd", ':lua require("harpoon.ui").nav_file(3)<CR>', silent, {})
 vim.keymap.set('n', "<leader>jf", ':lua require("harpoon.ui").nav_file(4)<CR>', silent, {})
 
+
+vim.keymap.set('n', '<leader>e', ':RnvimrToggle<CR>', {})
+vim.keymap.set('t', '<leader>e', ':RnvimrToggle<CR>', {})
+vim.cmd('let g:rnvimr_enable_picker = 1')
+vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
 
 -- fugitive - invoke git status
 vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
@@ -36,15 +50,6 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 -- Add two spaces macro for markdown
 -- Put cursor on starting line first and run @s
 vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
-
-
---
--- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>e', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 
 -- PHPDocBloc

@@ -89,3 +89,15 @@ vim.cmd('colorscheme dracula')
 vim.cmd('set background=dark')
 
 
+-- Consider files of 10Mg and above as 'large'
+vim.g.LargeFile = 1
+
+
+-- Airline
+vim.g.airline_theme = 'solarized'
+vim.g.airline_solarized_bg = 'dark'
+
+
+-- startify
+vim.g.startify_change_to_dir = 0 
+

@@ -37,6 +37,12 @@ function M.setup()
     use { "wbthomason/packer.nvim" }
 
     -- Themes
+    use {'iCyMind/NeoSolarized'}
+    use {'EdenEast/nightfox.nvim'}
+    use {'morhetz/gruvbox'}
+    use {'dracula/vim'}
+    use {'vim-airline/vim-airline'}
+    use {'vim-airline/vim-airline-themes'}
     use {
       'norcalli/nvim-colorizer.lua',
       config = function()
@@ -44,16 +50,11 @@ function M.setup()
       end,
     }
 
-    use {'iCyMind/NeoSolarized'}
-    use {'EdenEast/nightfox.nvim'}
-    use {'morhetz/gruvbox'}
-    use {'dracula/vim'}
-    use {'vim-airline/vim-airline'}
-    use {'vim-airline/vim-airline-themes'}
 
     -- Harpoon
     use {'nvim-lua/plenary.nvim'}
     use {'psaikido/harpoon'}
+
 
     -- LSP and autocompletions
     use {'neovim/nvim-lspconfig'}
@@ -67,11 +68,6 @@ function M.setup()
     use {'brett-griffin/phpdocblocks.vim'}
     use {'mhinz/vim-startify'}
     use {'mattn/emmet-vim'}
-
-    use {
-        'iamcco/markdown-preview.nvim',
-        config = "vim.call('mkdp#util#install')"
-    }
 
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -89,7 +85,7 @@ function M.setup()
     use {'vimwiki/vimwiki'}
 
     -- HC
-    use {'~/code/lifetrak/lifetrak-vim'}
+    --use {'~/code/lifetrak/lifetrak-vim'}
 
     if packer_bootstrap then
       print "Restart Neovim required after installation!"

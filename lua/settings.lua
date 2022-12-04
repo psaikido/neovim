@@ -76,3 +76,16 @@ vim.api.nvim_exec(
     false
 )
 
+-- Lifetrak
+vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
+
+-- Themes
+-- NeoSolarized
+--vim.cmd('colorscheme NeoSolarized')
+--vim.cmd('colorscheme gruvbox')
+--vim.cmd('colorscheme nightfox')
+vim.cmd('let g:dracula_colorterm = 0')
+vim.cmd('colorscheme dracula')
+vim.cmd('set background=dark')
+
+

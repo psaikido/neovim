@@ -47,36 +47,16 @@ vim.g.airline_solarized_bg = 'dark'
 -- fugitive - invoke git status
 keymap {'n', '<Leader>g', ':Git<CR>'}
 
-
--- Lifetrak
-vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
-
 -- LSP
 -- require('lsp')
 -- require('nvim-cmp')
-
-
--- Markdown preview
--- run after install if it doesn't happen automatically - :call mkdp#util#install()'})
-keymap {'n', '<Leader>mkp', ':MarkdownPreview<CR>'}
-keymap {'n', '<Leader>mks', ':MarkdownPreviewStop<CR>'}
-keymap {'n', '<Leader>mkt', ':MarkdownPreviewToggle<CR>'}
 
 
 -- Add two spaces macro for markdown
 -- Put cursor on starting line first and run @s
 vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
 
-
--- NeoSolarized
---vim.cmd('colorscheme NeoSolarized')
---vim.cmd('colorscheme gruvbox')
---vim.cmd('colorscheme nightfox')
-vim.cmd('let g:dracula_colorterm = 0')
-vim.cmd('colorscheme dracula')
-vim.cmd('set background=dark')
-
-
+--
 -- Ranger rnvimr
 keymap {'n', '<leader>e', ':RnvimrToggle<CR>'}
 keymap {'t', '<leader>e', ':RnvimrToggle<CR>'}
@@ -130,4 +110,10 @@ keymap {'n', '<leader>w<leader>v', ':VimwikiVSplitLink<cr>'}
 -- which-key
 require("which-key").setup {}
 vim.cmd('set timeoutlen=500')
+
+-- helpers
+P = function(v)
+    print(vim.inspect(v))
+    return v
+end
 

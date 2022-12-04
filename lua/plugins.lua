@@ -64,7 +64,7 @@ function M.setup()
     use { "folke/which-key.nvim" }
     use { "christoomey/vim-tmux-navigator" }
 
-    use { "joonty/vdebug" }
+    use { "vim-vdebug/vdebug" }
     use { "jreybert/vim-largefile" }
     use { "vimwiki/vimwiki" }
 

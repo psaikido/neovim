@@ -57,24 +57,12 @@ keymap {'n', '<Leader>g', ':Git<CR>'}
 vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
 
 --
--- Ranger rnvimr
-keymap {'n', '<leader>e', ':RnvimrToggle<CR>'}
-keymap {'t', '<leader>e', ':RnvimrToggle<CR>'}
-vim.cmd('let g:rnvimr_enable_picker = 1')
-vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
-
-
--- FuzzyFinder FZF
--- :help fzf-vim
--- https://github.com/junegunn/fzf/blob/master/README-VIM.md
-keymap {'n', '<Leader>ff', ':FZF <CR>'} -- search all files from pwd 
-keymap {'n', '<Leader>fh', ':FZF ~<CR>'} -- search from home dir
-keymap {'n', '<Leader>fg', ':GFiles<CR>'} -- search git files from git 
-keymap {'n', '<Leader>fb', ':Buffers<CR>'} -- search buffers
-keymap {'n', '<Leader>fr', ':Rg! <CR>'} -- search inside files with ripgrep
---local find_git_root = function()
-  --return vim.fn.system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
---end
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>e', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- PHPDocBloc
 keymap {'n', '<Leader>pd', ':PHPDocBlocks <CR>'} -- search inside files with ripgrep

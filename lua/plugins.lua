@@ -36,57 +36,52 @@ function M.setup()
   local function plugins(use)
     use { "wbthomason/packer.nvim" }
 
-    -- Themes
-    use {'iCyMind/NeoSolarized'}
-    use {'EdenEast/nightfox.nvim'}
-    use {'morhetz/gruvbox'}
-    use {'dracula/vim'}
-    use {'vim-airline/vim-airline'}
-    use {'vim-airline/vim-airline-themes'}
+    use { "nvim-lua/plenary.nvim" }
+    use { "nvim-telescope/telescope.nvim", tag = "0.1.0" }
+    use { "nvim-telescope/telescope-fzf-native.nvim" }
+    use { "BurntSushi/ripgrep" }
+    use { "sharkdp/fd" }
+    use { "neovim/nvim-lspconfig" }
+    use { "hrsh7th/nvim-cmp" }
+    use { "hrsh7th/cmp-nvim-lsp" }
     use {
-      'norcalli/nvim-colorizer.lua',
-      config = function()
-        require('config.colorizer').setup()
-      end,
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate"
     }
-
-
-    -- Harpoon
-    use {'nvim-lua/plenary.nvim'}
-    use {'psaikido/harpoon'}
-
-
-    -- LSP and autocompletions
-    use {'neovim/nvim-lspconfig'}
-    use {'hrsh7th/nvim-cmp'}
-    use {'hrsh7th/cmp-nvim-lsp'}
+    use { "psaikido/harpoon" }
 
 
     -- Helpers
-    use {'tpope/vim-fugitive'}
-    use {'tpope/vim-commentary'}
-    use {'brett-griffin/phpdocblocks.vim'}
-    use {'mhinz/vim-startify'}
-    use {'mattn/emmet-vim'}
+    use { "tpope/vim-fugitive" }
+    use { "tpope/vim-commentary" }
+    use { "brett-griffin/phpdocblocks.vim" }
+    use { "mhinz/vim-startify" }
+    use { "mattn/emmet-vim" }
 
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+    use { "folke/which-key.nvim" }
+    use { "christoomey/vim-tmux-navigator" }
 
-    use {'kevinhwang91/rnvimr'}
-    use {"junegunn/fzf"}
-    use {"junegunn/fzf.vim"}
-    use {'folke/which-key.nvim'}
-    use {'christoomey/vim-tmux-navigator'}
+    use { "joonty/vdebug" }
+    use { "jreybert/vim-largefile" }
+    use { "vimwiki/vimwiki" }
 
-    use {'joonty/vdebug'}
-    use {'jreybert/vim-largefile'}
-    use {'vimwiki/vimwiki'}
+    -- Themes
+    use { "iCyMind/NeoSolarized" }
+    use { "EdenEast/nightfox.nvim" }
+    use { "morhetz/gruvbox" }
+    use { "dracula/vim" }
+    use { "vim-airline/vim-airline" }
+    use { "vim-airline/vim-airline-themes" }
+    -- use {
+    --   'norcalli/nvim-colorizer.lua',
+    --   config = function()
+    --     require('config.colorizer').setup()
+    --   end,
+    -- }
 
     -- HC
-    --use {'~/code/lifetrak/lifetrak-vim'}
-
+    --use { "~/code/lifetrak/lifetrak-vim" }
+    
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
       require("packer").sync()

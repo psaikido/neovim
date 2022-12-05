@@ -17,29 +17,29 @@ vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {}) -- move visual lines up
 
 -- Telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>fh',  ':lua require("config.telescope").home_find()<cr>', {})
-vim.keymap.set('n', '<leader>dh',  ':lua require("config.telescope").browse_home()<cr>', {})
-vim.keymap.set('n', '<leader>dp',  ':lua require("config.telescope").browse_proj()<cr>', {})
+local conftel = require('config.telescope')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fc', builtin.commands, {})
+vim.keymap.set('n', '<leader>dh', conftel.home_find, {})
+vim.keymap.set('n', '<leader>dh', conftel.browse_home, {})
+vim.keymap.set('n', '<leader>dp', conftel.browse_proj, {})
 
 
 -- Harpoon
+local harpoonui = require('harpoon.ui')
 vim.keymap.set('n', "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', silent, {})
-vim.keymap.set('n', "<leader>j", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', silent, {})
-vim.keymap.set('n', "<leader>ja", ':lua require("harpoon.ui").nav_file(1)<CR>', silent, {})
-vim.keymap.set('n', "<leader>js", ':lua require("harpoon.ui").nav_file(2)<CR>', silent, {})
-vim.keymap.set('n', "<leader>jd", ':lua require("harpoon.ui").nav_file(3)<CR>', silent, {})
-vim.keymap.set('n', "<leader>jf", ':lua require("harpoon.ui").nav_file(4)<CR>', silent, {})
+vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, silent, {})
 
 
+-- Ranger
 vim.keymap.set('n', '<leader>e', ':RnvimrToggle<CR>', {})
 vim.keymap.set('t', '<leader>e', ':RnvimrToggle<CR>', {})
 vim.cmd('let g:rnvimr_enable_picker = 1')
 vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
+
 
 -- fugitive - invoke git status
 vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
@@ -63,25 +63,21 @@ vim.keymap.set('n', '<Leader>pd', ':PHPDocBlocks <CR>',{}) -- search inside file
 vim.keymap.set('n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>', {})
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {})
 
+
 -- vimwiki
 vim.cmd("let g:vimwiki_global_ext = 0")
-
 vim.cmd("let wiki_hc = {}")
 vim.cmd("let wiki_hc.path = '~/crypt/vimwiki/hc/'")
 vim.cmd("let wiki_hc.syntax = 'markdown'")
 vim.cmd("let wiki_hc.ext = 'md'")
-
 vim.cmd("let wiki_tech = {}")
 vim.cmd("let wiki_tech.path = '~/crypt/vimwiki/tech/'")
 vim.cmd("let wiki_tech.syntax = 'markdown'")
 vim.cmd("let wiki_tech.ext = 'md'")
-
-vim.cmd(
-    "let g:vimwiki_list = [wiki_tech, wiki_hc]"
-)
-
+vim.cmd("let g:vimwiki_list = [wiki_tech, wiki_hc]")
 vim.keymap.set('n', '<leader>w<leader>h', ':VimwikiSplitLink<cr>', {})
 vim.keymap.set('n', '<leader>w<leader>v', ':VimwikiVSplitLink<cr>', {})
+
 
 -- tmux nav
 vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<cr>', silent, {})
@@ -99,8 +95,3 @@ P = function(v)
     return v
 end
 
--- tmux navigation
- vim.keymap.set('n', '<C-h>', ':<C-U>TmuxNavigateLeft<cr>', {})
- vim.keymap.set('n', '<C-l>', ':<C-U>TmuxNavigateRight<cr>', {})
- vim.keymap.set('n', '<C-j>', ':<C-U>TmuxNavigateDown<cr>', {})
- vim.keymap.set('n', '<C-k>', ':<C-U>TmuxNavigateUp<cr>', {})

@@ -1,11 +1,12 @@
 -- HC
 vim.g.mapleader = ';'
+local silent = { silent = true }
 
 
 -- General Usage
 vim.keymap.set('n', '<C-s>', ':w<CR>', {})
 vim.keymap.set('n', '<C-c>', ':q<CR>', {})
-vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', {})
+vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', silent, {})
 vim.keymap.set('n', '<leader>h', ':set hls<CR>', {})
 vim.keymap.set('i', 'kj', '<Esc>', {})
 vim.keymap.set('n', '<leader>ra', ':lua require("reload").all()<CR>', {})
@@ -16,17 +17,17 @@ vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {}) -- move visual lines up
 
 -- Telescope
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ffh',  ':lua require("config.telescope").home_find()<cr>', {})
+vim.keymap.set('n', '<leader>fh',  ':lua require("config.telescope").home_find()<cr>', {})
+vim.keymap.set('n', '<leader>dh',  ':lua require("config.telescope").browse_home()<cr>', {})
+vim.keymap.set('n', '<leader>dp',  ':lua require("config.telescope").browse_proj()<cr>', {})
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fc', builtin.commands, {})
-vim.keymap.set('n', '<leader>fe', require('telescope').extensions.file_browser.file_browser, {})
 
 
 -- Harpoon
-local silent = { silent = true }
 vim.keymap.set('n', "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', silent, {})
 vim.keymap.set('n', "<leader>j", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', silent, {})
 vim.keymap.set('n', "<leader>ja", ':lua require("harpoon.ui").nav_file(1)<CR>', silent, {})
@@ -83,10 +84,10 @@ vim.keymap.set('n', '<leader>w<leader>h', ':VimwikiSplitLink<cr>', {})
 vim.keymap.set('n', '<leader>w<leader>v', ':VimwikiVSplitLink<cr>', {})
 
 -- tmux nav
-vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<cr>', {})
-vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', {})
-vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', {})
-vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', {})
+vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<cr>', silent, {})
+vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', silent, {})
+vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', silent, {})
+vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', silent, {})
 
 -- which-key
 require("which-key").setup {}

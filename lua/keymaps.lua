@@ -17,16 +17,11 @@ vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
 
 -- Telescope
 local builtin = require('telescope.builtin')
-local uetel = require("config.telescope")
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "Find Files"})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = "Live Grep"})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "Buffers"})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "Help"})
 vim.keymap.set('n', '<leader>fc', builtin.commands, {desc = "Commands"})
-vim.keymap.set('n', '<leader>df', uetel.home_find, {desc = "Home Find"})
-vim.keymap.set('n', '<leader>dh', uetel.hupoon, {desc = "hupoon"})
-vim.keymap.set('n', '<leader>dd', uetel.browse_proj, {desc = "Browse Project"})
-vim.keymap.set('n', '<leader>ds', uetel.search_buffer, {desc = "Search Buffer"})
 
 
 -- Harpoon
@@ -34,6 +29,14 @@ local harpoonui = require('harpoon.ui')
 local harpoonmark = require('harpoon.mark')
 vim.keymap.set('n', "<leader>a", harpoonmark.add_file, {desc = "harpoon add"})
 vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
+
+
+-- Hupoon
+local hupoon = require("config.hupoon")
+vim.keymap.set('n', '<leader>df', hupoon.home_find, {desc = "Home Find"})
+vim.keymap.set('n', '<leader>dh', hupoon.hupoon, {desc = "hupoon"})
+vim.keymap.set('n', '<leader>dd', hupoon.browse_proj, {desc = "Browse Project"})
+vim.keymap.set('n', '<leader>ds', hupoon.search_buffer, {desc = "Search Buffer"})
 
 
 -- Ranger

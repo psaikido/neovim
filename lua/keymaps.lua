@@ -24,9 +24,9 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fc', builtin.commands, {})
 vim.keymap.set('n', '<leader>df', uetel.home_find, {})
-vim.keymap.set('n', '<leader>dh', uetel.browse_home, {})
+vim.keymap.set('n', '<leader>dh', uetel.hupoon, {})
 vim.keymap.set('n', '<leader>dd', uetel.browse_proj, {})
-vim.keymap.set('n', '<C-_>',      uetel.search_buffer, {})
+vim.keymap.set('n', '<leader>ds', uetel.search_buffer, {})
 
 
 -- Harpoon

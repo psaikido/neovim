@@ -10,29 +10,30 @@ vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', silent, {})
 vim.keymap.set('n', '<leader>h', ':set hls<CR>', {})
 vim.keymap.set('i', 'kj', '<Esc>', {})
 vim.keymap.set('n', '<leader>ra', ':lua require("reload").all()<CR>', {})
-vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {})
-vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {}) -- move visual lines down
-vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {}) -- move visual lines up
+vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {desc = "Zoom"})
+vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {desc = "move visual lines down"}) 
+vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
 
 
 -- Telescope
 local builtin = require('telescope.builtin')
 local uetel = require("config.telescope")
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>fc', builtin.commands, {})
-vim.keymap.set('n', '<leader>df', uetel.home_find, {})
-vim.keymap.set('n', '<leader>dh', uetel.hupoon, {})
-vim.keymap.set('n', '<leader>dd', uetel.browse_proj, {})
-vim.keymap.set('n', '<leader>ds', uetel.search_buffer, {})
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "Find Files"})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = "Live Grep"})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "Buffers"})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "Help"})
+vim.keymap.set('n', '<leader>fc', builtin.commands, {desc = "Commands"})
+vim.keymap.set('n', '<leader>df', uetel.home_find, {desc = "Home Find"})
+vim.keymap.set('n', '<leader>dh', uetel.hupoon, {desc = "hupoon"})
+vim.keymap.set('n', '<leader>dd', uetel.browse_proj, {desc = "Browse Project"})
+vim.keymap.set('n', '<leader>ds', uetel.search_buffer, {desc = "Search Buffer"})
 
 
 -- Harpoon
 local harpoonui = require('harpoon.ui')
-vim.keymap.set('n', "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', silent, {})
-vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, silent, {})
+local harpoonmark = require('harpoon.mark')
+vim.keymap.set('n', "<leader>a", harpoonmark.add_file, {desc = "harpoon add"})
+vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
 
 
 -- Ranger

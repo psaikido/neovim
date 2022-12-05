@@ -1,9 +1,11 @@
-local M = {}
+local uetel = {}
 
 require('telescope').setup {
   defaults = {
       prompt_prefix = '> ',
       sorting_strategy = 'ascending',
+      winblend = 20,
+      path_display = {shorten = 1},
 
       layout_config = {
           prompt_position = 'top'
@@ -22,25 +24,29 @@ require('telescope').setup {
   },
 }
 
-function M.home_find()
+uetel.home_find = function()
   require('telescope.builtin').find_files {
       cwd = '~/'
   }
 end
 
-function M.browse_home()
+uetel.browse_home = function()
     require('telescope').extensions.file_browser.file_browser{
         path = '~',
         cwd_to_path = true,
     }
 end
 
-function M.browse_proj()
+uetel.browse_proj = function()
     require('telescope').extensions.file_browser.file_browser{}
+end
+
+uetel.search_buffer = function()
+    require("telescope.builtin").current_buffer_fuzzy_find()
 end
 
 require('telescope').load_extension('media_files')
 require('telescope').load_extension('file_browser')
 
-return M
+return uetel
 

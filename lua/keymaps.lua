@@ -17,15 +17,16 @@ vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {}) -- move visual lines up
 
 -- Telescope
 local builtin = require('telescope.builtin')
-local conftel = require('config.telescope')
+local uetel = require("config.telescope")
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fc', builtin.commands, {})
-vim.keymap.set('n', '<leader>dh', conftel.home_find, {})
-vim.keymap.set('n', '<leader>dh', conftel.browse_home, {})
-vim.keymap.set('n', '<leader>dp', conftel.browse_proj, {})
+vim.keymap.set('n', '<leader>df', uetel.home_find, {})
+vim.keymap.set('n', '<leader>dh', uetel.browse_home, {})
+vim.keymap.set('n', '<leader>dd', uetel.browse_proj, {})
+vim.keymap.set('n', '<C-_>',      uetel.search_buffer, {})
 
 
 -- Harpoon

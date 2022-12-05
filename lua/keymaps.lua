@@ -21,6 +21,8 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fc', builtin.commands, {})
+vim.keymap.set('n', '<leader>fe', require('telescope').extensions.file_browser.file_browser, {})
 
 
 -- Harpoon
@@ -80,6 +82,11 @@ vim.cmd(
 vim.keymap.set('n', '<leader>w<leader>h', ':VimwikiSplitLink<cr>', {})
 vim.keymap.set('n', '<leader>w<leader>v', ':VimwikiVSplitLink<cr>', {})
 
+-- tmux nav
+vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<cr>', {})
+vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', {})
+vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', {})
+vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', {})
 
 -- which-key
 require("which-key").setup {}

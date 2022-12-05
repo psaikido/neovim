@@ -36,26 +36,23 @@ function M.setup()
   local function plugins(use)
     use { "wbthomason/packer.nvim" }
 
+    -- Navigation
     use { "nvim-lua/plenary.nvim" }
     use { "nvim-telescope/telescope.nvim", tag = "0.1.0" }
     use { "nvim-telescope/telescope-fzf-native.nvim" }
+    use { "nvim-telescope/telescope-media-files.nvim" }
+    use { "nvim-telescope/telescope-file-browser.nvim" }
     use { "BurntSushi/ripgrep" }
     use { "sharkdp/fd" }
-
-
-    -- Navigation
-    use { "psaikido/harpoon" }
+    use { "nvim-lua/popup.nvim" }
     use { "kevinhwang91/rnvimr" }
-
+    use { "psaikido/harpoon" }
 
     -- LSP - Treesitter
     use { "neovim/nvim-lspconfig" }
     use { "hrsh7th/nvim-cmp" }
     use { "hrsh7th/cmp-nvim-lsp" }
-    use {
-        "nvim-treesitter/nvim-treesitter",
-    }
-
+    use { "nvim-treesitter/nvim-treesitter" }
 
     -- Helpers
     use { "tpope/vim-fugitive" }

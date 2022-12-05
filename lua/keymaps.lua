@@ -32,9 +32,9 @@ vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, {desc = "harpoon s
 
 
 -- Hupoon
-local hupoon = require("config.hupoon")
-vim.keymap.set('n', '<leader>df', hupoon.home_find, {desc = "Home Find"})
+local hupoon = require("hupoon")
 vim.keymap.set('n', '<leader>dh', hupoon.hupoon, {desc = "hupoon"})
+vim.keymap.set('n', '<leader>df', hupoon.home_find, {desc = "Home Find"})
 vim.keymap.set('n', '<leader>dd', hupoon.browse_proj, {desc = "Browse Project"})
 vim.keymap.set('n', '<leader>ds', hupoon.search_buffer, {desc = "Search Buffer"})
 

@@ -1,8 +1,6 @@
 *hc.txt* - hughie's vim notes
 
-===
-SETUP:
-
+SETUP:~
 Edit this file at $HOME/neovim/doc/hc.txt
 
 Symlink neovim's config to this neovim dir:
@@ -11,34 +9,39 @@ ln -s ~/neovim ~/.config/nvim
 run :helptags ~/.config/nvim/doc/
 This file should then show up with:
 :h hc.txt
-===
 
-Increment numbers. Select a vertical list of numbers with CTRL-v then motion.
+
+Increment numbers:~
+Select a vertical list of numbers with CTRL-v then motion.
 CTRL-A increments them all, you typically end up with a column of '2's.
 Prefix with a 'g' and they will increment 2,3,4..
 
-delete all whitespace at the beginning of a string
+
+Delete all whitespace at the beginning of a string:~
 %s:^\s\+::
 
-delete all whitespace at the end of a line
+
+Delete all whitespace at the end of a line:~
 %s:\s\+$::
 
-delete blank rows
+
+Delete blank rows:~
 %s:^[\ \t]*$\n::g
 
-autoformat a file
+
+Autoformat a file:~
 gg=G
 
-indent everything inside {}
+
+Indent everything inside {}:~
 >iB
 
-indent everything inside {} for a whole file
+
+Indent everything inside {} for a whole file:~
 g:\({\|}\):exe "normal >iB"
 
-macro record = q
-qa [actions]
-replay with @a
 
+Format many files:~
 vim -c 'bufdo exe "norm gg=G" | w' -c 'q' *.php
 17:27 < \amethyst> psaikido:  bufdo runs a command on all buffers; exe runs a
                   string as a command (it's just a hack to get around the
@@ -47,23 +50,28 @@ vim -c 'bufdo exe "norm gg=G" | w' -c 'q' *.php
 17:28 < \amethyst> psaikido:  and you know what w and q do
 17:28 < \amethyst> psaikido:  :help :bufdo    :help :norm  :help exe  :help -c 
 
-zt
-move current line to the top of the window
 
-folding:
+Move current line to the top of the window:~
+zt
+
+
+Folding:~
 highlight a block with shift+v and movements
 then zf to create fold
 zo opens and zc closes
 
-fold all functions in a file:
+
+Fold all functions in a file:~
 g:function:exe "norm v$%zf"
 
-with lots of windows open within a session you can save it with
+
+With lots of windows open within a session you can save it with:~
 :mks [name].vims
 and then use that file to open the whole lot next time ie:
 vim -S [name].vims
 
-multiple file search and replace for multiple things:
+
+Multiple file search and replace for multiple things:~
 eg:make a file with the commands that you want in like this..
   %s: BankDepositDates: tx_wcfmem_BankDepositDates:gec | update
   %s: Bursaries: tx_wcfmem_Bursaries:gec | update
@@ -73,31 +81,38 @@ eg:make a file with the commands that you want in like this..
   :args *.php (this puts all the relevant files into memory buffers)
   :argdo :so [scriptName.s]
 
-Output results of a command into a new buffer
+
+Output results of a command into a new buffer:~
 enew | put=execute('set runtimepath?')
 or
 tabnew | put=execute('scriptnames')
 
-Completion:
+
+Completion:~
 vim 'ctrl-x ctrl-f' filename completion. 
 See https://www.youtube.com/watch?v=3TX3kV3TICU&t=917s
 Checkout 'ctags'.
 
-Move through jump list:
+
+Move through jump list:~
 ctrl-i ('in')
 ctrl-o ('out')
 
-Complete entire line:
+
+Complete entire line:~
 ctrl-x ctrl-l
 ..when repeated it keeps context so multi-lines without typing.
 
-Context aware omni-completion:
+
+Context aware omni-completion:~
 ctrl-x ctrl-o
 
-Format json:
+
+Format json:~
 :%!python -m json.tool
 
-One eyed fighting Kirby (?)
+
+One eyed fighting Kirby (?):~
 \(.*\)
 ..it's a regex that amounts to "anything between"
 so you can use it in substitutions like this:

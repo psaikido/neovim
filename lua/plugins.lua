@@ -78,7 +78,7 @@ function M.setup()
     use { "norcalli/nvim-colorizer.lua" }
 
     -- HC
-    use { "~/code/lifetrak/lifetrak-vim" }
+    use { "~/code/lifetrak/lifetrak.nvim" }
 
     if packer_bootstrap then
       print "Restart Neovim required after installation!"

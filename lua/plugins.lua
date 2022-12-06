@@ -49,10 +49,12 @@ function M.setup()
     use { "psaikido/harpoon" }
 
     -- LSP - Treesitter
+    use { "nvim-treesitter/nvim-treesitter" }
     use { "neovim/nvim-lspconfig" }
     use { "hrsh7th/nvim-cmp" }
     use { "hrsh7th/cmp-nvim-lsp" }
-    use { "nvim-treesitter/nvim-treesitter" }
+    use { "folke/neodev.nvim" }
+    use { "sumneko/lua-language-server" }
 
     -- Helpers
     use { "tpope/vim-fugitive" }
@@ -60,10 +62,8 @@ function M.setup()
     use { "brett-griffin/phpdocblocks.vim" }
     use { "mhinz/vim-startify" }
     use { "mattn/emmet-vim" }
-
     use { "folke/which-key.nvim" }
     use { "christoomey/vim-tmux-navigator" }
-
     use { "vim-vdebug/vdebug" }
     use { "jreybert/vim-largefile" }
     use { "vimwiki/vimwiki" }
@@ -79,8 +79,7 @@ function M.setup()
 
     -- HC
     use { "~/code/lifetrak/lifetrak-vim" }
-        run = ":TSUpdate"
-    
+
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
       require("packer").sync()

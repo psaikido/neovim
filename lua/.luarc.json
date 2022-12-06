@@ -1,0 +1,24 @@
+{
+    "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+    "Lua.workspace.library": [
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/neodev.nvim/types/stable",
+        "/usr/share/nvim/runtime",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/harpoon",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/packer.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/popup.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+        "/home/hughie/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+        "${3rd}/luassert/library"
+    ]
+}

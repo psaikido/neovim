@@ -8,7 +8,7 @@ local actions = require "telescope.actions"
 local action_state = require "telescope.actions.state"
 
 M.hupoon = function()
-    opts = opts or {}
+    local opts = opts or {}
     pickers.new(opts, {
         prompt_title = "hupoon",
 
@@ -30,7 +30,7 @@ M.hupoon = function()
         sorter = conf.generic_sorter(opts),
 
         layout_config = {
-            width = 0.5 
+            width = 0.5
         },
 
         attach_mappings = function(prompt_bufnr, map)

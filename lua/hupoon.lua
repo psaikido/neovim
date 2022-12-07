@@ -33,14 +33,19 @@ M.hupoon = function()
             width = 0.5
         },
 
-        attach_mappings = function(prompt_bufnr, map)
+        attach_mappings = function(prompt_bufnr, _)
             actions.select_default:replace(function()
                 actions.close(prompt_bufnr)
 
                 local selection = action_state.get_selected_entry()
                 require('telescope').extensions.file_browser.file_browser{
-                    path = selection[1], 
+                    path = selection[1],
                     cwd_to_path = true,
+                    -- make a way to open a terminal
+                    -- if the selection is a valid directory
+                    --vim.api.nvim_create_buf(listed, scratch)
+                    --vim.api.nvim_open_win()
+                    --vim.api.nvim_open_term()
                 }
             end)
             return true
@@ -49,9 +54,16 @@ M.hupoon = function()
 end
 
 
-M.home_find = function()
+M.find_home = function()
     require('telescope.builtin').find_files {
         cwd = '~/'
+    }
+end
+
+
+M.find_here = function()
+    require('telescope.builtin').find_files {
+        cwd = '.'
     }
 end
 

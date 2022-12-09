@@ -54,10 +54,11 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
 -- lifetrak
-local lft = require('lifetrak')
-vim.keymap.set('n', '<leader>ld', lft.view_down, silent)
-vim.keymap.set('n', '<leader>lu', lft.view_up, silent)
-vim.keymap.set('n', '<leader>le', lft.journal_entry, silent)
+local lifetrak = require('lifetrak')
+vim.keymap.set('n', '<leader>lj', lifetrak.view_down, silent)
+vim.keymap.set('n', '<leader>lk', lifetrak.view_up, silent)
+vim.keymap.set('n', '<leader>le', lifetrak.journal_entry, silent)
+vim.keymap.set('n', '<leader>lt', lifetrak.choose_tag, silent)
 
 
 -- Add two spaces macro for markdown

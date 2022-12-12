@@ -16,7 +16,7 @@ M.all = function()
     vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end
 
-M.insp = function(v)
+M.p = function(v)
     print(vim.inspect(v))
 end
 

@@ -1,10 +1,10 @@
 local M = {}
 
-M.keymaps = function()
+function M.keymaps()
     vim.cmd('nmapc')
 end
 
-M.all = function()
+function M.all()
     for name,_ in pairs(package.loaded) do
         package.loaded[name] = nil
     end

@@ -50,11 +50,11 @@ function M.setup()
 
     -- LSP - Treesitter
     use { "nvim-treesitter/nvim-treesitter" }
-    use { "neovim/nvim-lspconfig" }
-    use { "hrsh7th/nvim-cmp" }
-    use { "hrsh7th/cmp-nvim-lsp" }
-    use { "folke/neodev.nvim" }
-    use { "sumneko/lua-language-server" }
+    -- use { "neovim/nvim-lspconfig" }
+    -- use { "hrsh7th/nvim-cmp" }
+    -- use { "hrsh7th/cmp-nvim-lsp" }
+    -- use { "folke/neodev.nvim" }
+    -- use { "sumneko/lua-language-server" }
 
     -- Helpers
     use { "tpope/vim-fugitive" }
@@ -78,7 +78,8 @@ function M.setup()
     use { "norcalli/nvim-colorizer.lua" }
 
     -- HC
-    use { "~/code/lifetrak/lifetrak.nvim" }
+    use { "~/code/nvim-plugins-hc/lifetrak.nvim" }
+    use { "~/code/nvim-plugins-hc/hupoon.nvim" }
 
     if packer_bootstrap then
       print "Restart Neovim required after installation!"

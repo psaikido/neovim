@@ -12,7 +12,7 @@ function M.setup()
           local opts = { noremap=true, silent=true }
 
           buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-          buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+          buf_set_keymap('n', '<leader>sk', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
           buf_set_keymap('n', '<leader>si', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
           buf_set_keymap('n', '<leader>sd', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
           buf_set_keymap('n', '<leader>sr', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)

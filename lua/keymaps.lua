@@ -53,9 +53,11 @@ vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
 vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
--- LSP
--- require('lsp')
--- require('nvim-cmp')
+-- lifetrak
+local lft = require('lifetrak')
+vim.keymap.set('n', '<leader>ld', lft.view_down, silent)
+vim.keymap.set('n', '<leader>lu', lft.view_up, silent)
+vim.keymap.set('n', '<leader>le', lft.journal_entry, silent)
 
 
 -- Add two spaces macro for markdown
@@ -96,10 +98,4 @@ vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', silent, {})
 -- which-key
 require("which-key").setup {}
 vim.cmd('set timeoutlen=500')
-
--- helpers
-P = function(v)
-    print(vim.inspect(v))
-    return v
-end
 

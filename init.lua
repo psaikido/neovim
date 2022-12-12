@@ -6,6 +6,6 @@ require('config.telescope')
 -- require('lsp')
 -- require("neodev").setup({})
 -- require('config.lsp-lua').setup()
-require('lifetrak')
+require('config/lifetrak').setup()
 require('config/hupoon').setup()
 

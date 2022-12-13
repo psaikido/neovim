@@ -1,12 +1,13 @@
 local M = {}
 
 function M.setup()
-    require('lifetrak').setup(
-        {
-            journal= '~/journal.lft',
-            -- journal= '~/crypt/journal/journal.lft',
-        }
-    )
+    local config = {
+        journal = '~/journal.lft',
+        -- journal = '~/crypt/journal/journal.lft',
+        metas = {'energy', 'pain', 'mood', 'sleep'},
+    }
+
+    require('lifetrak').init(config)
 end
 
 return M

@@ -76,9 +76,6 @@ vim.api.nvim_exec(
     false
 )
 
--- Lifetrak
-vim.g.lifetrak_metas = {'energy', 'pain', 'mood', 'sleep'}
-
 -- Themes
 -- NeoSolarized
 --vim.cmd('colorscheme NeoSolarized')

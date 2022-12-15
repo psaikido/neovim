@@ -3,12 +3,11 @@
 SETUP:~
 Edit this file at $HOME/neovim/doc/hc.txt
 
-Symlink neovim's config to this neovim dir:
-ln -s ~/neovim ~/.config/nvim
-
 run :helptags ~/.config/nvim/doc/
 This file should then show up with:
 :h hc.txt
+
+NB: `:h help-writing`
 
 
 Increment numbers:~
@@ -126,6 +125,14 @@ which breaks down as:
 :>\(.*\)<: --whatever is found between '>' and '<' is matched as \1
 :><span>\1</span><: --substitute the extra text and put in the matched group
 
+
+Tabularise:~
+Visual select then
+>
+  :'<,'>!column -t
+
+<you can `man column` for more options as it is a standard unix tool.
+You can call eg. `!sort -k2` to sort on column 2.
 
 
 vim:tw=78:ts=2:sts=2:sw=2:ft=help:norl:

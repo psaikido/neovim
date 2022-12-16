@@ -1,4 +1,3 @@
-require('settings')
 require('plugins').setup()
 require('utils')
 require('config.telescope')

@@ -1,6 +1,5 @@
 require('settings')
 require('plugins').setup()
-require('keymaps')
 require('utils')
 require('config.telescope')
 -- require('lsp')

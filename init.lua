@@ -1,9 +1,11 @@
 require('plugins').setup()
 require('utils')
 require('config.telescope')
--- require('lsp')
--- require("neodev").setup({})
--- require('config.lsp-lua').setup()
+
+local lsp = require('lsp-zero')
+lsp.preset('recommended')
+lsp.setup()
+
 require('config/lifetrak').setup()
 require('config/hupoon').setup()
 

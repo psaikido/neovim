@@ -1,5 +1,5 @@
 -- HC
-vim.g.mapleader = ';'
+-- vim.g.mapleader = ';'
 local silent = { silent = true }
 
 
@@ -9,37 +9,52 @@ vim.keymap.set('n', '<C-c>', ':q<CR>', {})
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', silent, {})
 vim.keymap.set('n', '<leader>sh', ':set hls<CR>', {})
 vim.keymap.set('i', 'kj', '<Esc>', {})
-vim.keymap.set('n', '<leader>ra', ':lua require("utils").all()<CR>', {})
+vim.keymap.set('n', '<leader>ra', ':lua require("hc.utils").reload()<CR>', {})
 vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {desc = "Zoom"})
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {desc = "move visual lines down"})
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
 
 
 -- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "Find Files"})
--- vim.keymap.set('n', '<leader>ff', builtin.find_files, {search_dirs={"~/.rchamp","~/dotfiles"}})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = "Live Grep"})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "Buffers"})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "Help"})
-vim.keymap.set('n', '<leader>fc', builtin.commands, {desc = "Commands"})
-vim.keymap.set('n', '<leader>fd', builtin.diagnostics,{desc = "Diagnostics"})
+-- See `:help telescope.builtin`
+vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
+vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>/', function()
+  -- You can pass additional configuration to telescope to change theme, layout, etc.
+  require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    winblend = 10,
+    previewer = true,
+  })
+end, { desc = '[/] Fuzzily search in current buffer]' })
+
+vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
+vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
+vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
+vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 
 -- Harpoon
-local harpoonui = require('harpoon.ui')
-local harpoonmark = require('harpoon.mark')
-vim.keymap.set('n', "<leader>a", harpoonmark.add_file, {desc = "harpoon add"})
-vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
+-- local harpoonui = require('harpoon.ui')
+-- local harpoonmark = require('harpoon.mark')
+-- vim.keymap.set('n', "<leader>a", harpoonmark.add_file, {desc = "harpoon add"})
+-- vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
 
 
 -- Hupoon
-local hupoon = require("hupoon")
-vim.keymap.set('n', '<leader>h', hupoon.hupoon, {desc = "hupoon"})
-vim.keymap.set('n', '<leader>hh', hupoon.find_home, {desc = "Home Find"})
-vim.keymap.set('n', '<leader>hf', hupoon.find_here, {desc = "Here Find"})
-vim.keymap.set('n', '<leader>hp', hupoon.browse_proj, {desc = "Browse Project"})
-vim.keymap.set('n', '<leader>hb', hupoon.search_buffer, {desc = "Search Buffer"})
+-- local hupoon = require("hupoon")
+-- vim.keymap.set('n', '<leader>h', hupoon.hupoon, {desc = "hupoon"})
+-- vim.keymap.set('n', '<leader>hh', hupoon.find_home, {desc = "Home Find"})
+-- vim.keymap.set('n', '<leader>hf', hupoon.find_here, {desc = "Here Find"})
+-- vim.keymap.set('n', '<leader>hp', hupoon.browse_proj, {desc = "Browse Project"})
+-- vim.keymap.set('n', '<leader>hb', hupoon.search_buffer, {desc = "Search Buffer"})
 
 
 -- Ranger
@@ -54,11 +69,11 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
 -- lifetrak
-local lifetrak = require('lifetrak')
-vim.keymap.set('n', '<leader>lj', lifetrak.view_down, {desc = "Next entry"})
-vim.keymap.set('n', '<leader>lk', lifetrak.view_up, {desc = "Previous entry"})
-vim.keymap.set('n', '<leader>le', lifetrak.journal_entry, {desc = "New entry"})
-vim.keymap.set('n', '<leader>lt', lifetrak.choose_tag, {desc = "Filter by tag"})
+-- local lifetrak = require('lifetrak')
+-- vim.keymap.set('n', '<leader>lj', lifetrak.view_down, {desc = "Next entry"})
+-- vim.keymap.set('n', '<leader>lk', lifetrak.view_up, {desc = "Previous entry"})
+-- vim.keymap.set('n', '<leader>le', lifetrak.journal_entry, {desc = "New entry"})
+-- vim.keymap.set('n', '<leader>lt', lifetrak.choose_tag, {desc = "Filter by tag"})
 
 
 -- Add two spaces macro for markdown
@@ -67,7 +82,7 @@ vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
 
 
 -- PHPDocBloc
-vim.keymap.set('n', '<Leader>pd', ':PHPDocBlocks <CR>',{}) -- search inside files with ripgrep
+-- vim.keymap.set('n', '<Leader>pd', ':PHPDocBlocks <CR>',{}) -- search inside files with ripgrep
 
 
 -- terminal
@@ -96,7 +111,4 @@ vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', silent, {})
 vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', silent, {})
 vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', silent, {})
 
--- which-key
-require("which-key").setup {}
-vim.cmd('set timeoutlen=500')
 

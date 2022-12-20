@@ -1,16 +1,14 @@
-local M = {}
+M = {}
 
 function M.keymaps()
     vim.cmd('nmapc')
+    vim.notify("keymaps reloaded!", vim.log.levels.INFO)
 end
 
-function M.all()
+function M.reload()
     for name,_ in pairs(package.loaded) do
         package.loaded[name] = nil
     end
-
-    M.keymaps()
-    vim.notify("keymaps reloaded!", vim.log.levels.INFO)
 
     dofile(vim.env.MYVIMRC)
     vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)

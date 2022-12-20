@@ -53,6 +53,8 @@ require('packer').startup(function(use)
 
   -- Fuzzy Finder (files, lsp, etc)
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
+  use { "nvim-telescope/telescope-media-files.nvim" }
+  use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
@@ -65,6 +67,11 @@ require('packer').startup(function(use)
   use { "vimwiki/vimwiki" }
   use { "morhetz/gruvbox" }
   use { "dracula/vim" }
+
+  -- hc
+  use { "psaikido/harpoon" }
+  use { "~/code/nvim-plugins-hc/hupoon.nvim" }
+  use { "~/code/nvim-plugins-hc/lifetrak.nvim" }
 
   if is_bootstrap then
     require('packer').sync()

@@ -114,10 +114,25 @@ _G.packer_plugins = {
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/psaikido/harpoon"
+  },
+  ["hupoon.nvim"] = {
+    loaded = true,
+    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/hupoon.nvim",
+    url = "/home/hughie/code/nvim-plugins-hc/hupoon.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lifetrak.nvim"] = {
+    loaded = true,
+    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/lifetrak.nvim",
+    url = "/home/hughie/code/nvim-plugins-hc/lifetrak.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -176,6 +191,11 @@ _G.packer_plugins = {
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/rnvimr",
     url = "https://github.com/kevinhwang91/rnvimr"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     cond = { true },
     loaded = false,
@@ -183,6 +203,11 @@ _G.packer_plugins = {
     only_cond = true,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/opt/telescope-fzf-native.nvim",
     url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,

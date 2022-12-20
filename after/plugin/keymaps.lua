@@ -42,19 +42,19 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 
 -- Harpoon
--- local harpoonui = require('harpoon.ui')
--- local harpoonmark = require('harpoon.mark')
--- vim.keymap.set('n', "<leader>a", harpoonmark.add_file, {desc = "harpoon add"})
--- vim.keymap.set('n', "<leader>j", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
+local harpoonui = require('harpoon.ui')
+local harpoonmark = require('harpoon.mark')
+vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
+vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
 
 
 -- Hupoon
--- local hupoon = require("hupoon")
--- vim.keymap.set('n', '<leader>h', hupoon.hupoon, {desc = "hupoon"})
--- vim.keymap.set('n', '<leader>hh', hupoon.find_home, {desc = "Home Find"})
--- vim.keymap.set('n', '<leader>hf', hupoon.find_here, {desc = "Here Find"})
--- vim.keymap.set('n', '<leader>hp', hupoon.browse_proj, {desc = "Browse Project"})
--- vim.keymap.set('n', '<leader>hb', hupoon.search_buffer, {desc = "Search Buffer"})
+local hupoon = require("hupoon")
+vim.keymap.set('n', '<leader>u', hupoon.hupoon, {desc = "hupoon"})
+vim.keymap.set('n', '<leader>uh', hupoon.find_home, {desc = "Home Find"})
+vim.keymap.set('n', '<leader>uf', hupoon.find_here, {desc = "Here Find"})
+vim.keymap.set('n', '<leader>up', hupoon.browse_proj, {desc = "Browse Project"})
+vim.keymap.set('n', '<leader>ub', hupoon.search_buffer, {desc = "Search Buffer"})
 
 
 -- Ranger
@@ -69,11 +69,20 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
 -- lifetrak
--- local lifetrak = require('lifetrak')
--- vim.keymap.set('n', '<leader>lj', lifetrak.view_down, {desc = "Next entry"})
--- vim.keymap.set('n', '<leader>lk', lifetrak.view_up, {desc = "Previous entry"})
--- vim.keymap.set('n', '<leader>le', lifetrak.journal_entry, {desc = "New entry"})
--- vim.keymap.set('n', '<leader>lt', lifetrak.choose_tag, {desc = "Filter by tag"})
+local lifetrak = require('lifetrak')
+local filter_tags = require('lifetrak.filter_tags')
+vim.keymap.set('n', '<leader>lj', lifetrak.view_down, {desc = "Next entry"})
+vim.keymap.set('n', '<leader>lk', lifetrak.view_up, {desc = "Previous entry"})
+vim.keymap.set('n', '<leader>le', lifetrak.journal_entry, {desc = "New entry"})
+vim.keymap.set('n', '<leader>lc', lifetrak.change_current, {desc = "Change current journal"})
+vim.keymap.set('n', '<leader>lo', lifetrak.open_current, {desc = "Open current journal"})
+vim.keymap.set('n', '<leader>lt', filter_tags.choose_tag, {desc = "Filter by tag"})
+-- command! Lifetrak execute ":lua require('lifetrak').open_current()"
+-- command! LifetrakChangeCurrent execute ":lua require('lifetrak').change_current()"
+-- command! LifetrakEntry execute ":lua require('lifetrak').journal_entry()"
+-- command! LifetrakFilterMetas execute ":lua require('lifetrak.filter_metas').choose_meta()"
+-- command! LifetrakFilterTags execute ":lua require('lifetrak').choose_tag()"
+
 
 
 -- Add two spaces macro for markdown
@@ -111,4 +120,10 @@ vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', silent, {})
 vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', silent, {})
 vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', silent, {})
 
+-- Keymaps for better default experience
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 

@@ -11,13 +11,14 @@ require('hc.lsp')
 require('hc.lualine')
 require('hc.plugins')
 require('hc.telescope')
+require('hc.transparent')
 require('hc.treesitter')
 require('hc.utils')
 require('Comment').setup()
 require('hc.hupoon').setup()
 require('hc.lifetrak').setup()
-require('which-key').setup {}
 require('hc.indent_blankline')
+require('which-key').setup {}
 
 vim.cmd('set timeoutlen=500')
 

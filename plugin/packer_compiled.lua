@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-transparent"] = {
+    loaded = true,
+    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-transparent",
+    url = "https://github.com/xiyaowong/nvim-transparent"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -170,11 +175,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/opt/nvim-treesitter-textobjects",
     url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
-  },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/navarasu/onedark.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,

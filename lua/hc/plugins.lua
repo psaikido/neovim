@@ -68,7 +68,7 @@ require('packer').startup(function(use)
   -- Colours
   use 'morhetz/gruvbox'
   use 'dracula/vim'
-  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
+  use 'xiyaowong/nvim-transparent'
 
   -- hc
   use { "psaikido/harpoon" }

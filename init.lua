@@ -20,6 +20,4 @@ require('hc.lifetrak').setup()
 require('hc.indent_blankline')
 require('which-key').setup {}
 
-vim.cmd('set timeoutlen=500')
-
 -- vim: ts=2 sts=2 sw=2 et

@@ -71,18 +71,16 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 -- lifetrak
 local lifetrak = require('lifetrak')
 local filter_tags = require('lifetrak.filter_tags')
+local filter_metas = require('lifetrak.filter_metas')
+local lifetrak_utils = require('lifetrak.utils')
 vim.keymap.set('n', '<leader>lj', lifetrak.view_down, {desc = "Next entry"})
 vim.keymap.set('n', '<leader>lk', lifetrak.view_up, {desc = "Previous entry"})
 vim.keymap.set('n', '<leader>le', lifetrak.journal_entry, {desc = "New entry"})
 vim.keymap.set('n', '<leader>lc', lifetrak.change_current, {desc = "Change current journal"})
 vim.keymap.set('n', '<leader>lo', lifetrak.open_current, {desc = "Open current journal"})
 vim.keymap.set('n', '<leader>lt', filter_tags.choose_tag, {desc = "Filter by tag"})
--- command! Lifetrak execute ":lua require('lifetrak').open_current()"
--- command! LifetrakChangeCurrent execute ":lua require('lifetrak').change_current()"
--- command! LifetrakEntry execute ":lua require('lifetrak').journal_entry()"
--- command! LifetrakFilterMetas execute ":lua require('lifetrak.filter_metas').choose_meta()"
--- command! LifetrakFilterTags execute ":lua require('lifetrak').choose_tag()"
-
+vim.keymap.set('n', '<leader>lm', filter_metas.choose_meta, {desc = "Filter by metas"})
+vim.keymap.set('n', '<leader>lr', lifetrak_utils.reload, {desc = "Reload"})
 
 
 -- Add two spaces macro for markdown

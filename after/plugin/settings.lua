@@ -4,8 +4,9 @@
 -- Set highlight on search
 vim.o.hlsearch = false
 
--- Make line numbers default
-vim.wo.number = true
+vim.wo.number         = true
+vim.wo.relativenumber = true
+vim.o.cmdheight       = 1
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -43,4 +44,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
+
+vim.cmd('set timeoutlen=500')
 

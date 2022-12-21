@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 
 function M.keymaps()
     vim.cmd('nmapc')
@@ -6,11 +6,7 @@ function M.keymaps()
 end
 
 function M.reload()
-    for name,_ in pairs(package.loaded) do
-        package.loaded[name] = nil
-    end
-
-    dofile(vim.env.MYVIMRC)
+    require('plenary.reload').reload_module('hc')
     vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end
 

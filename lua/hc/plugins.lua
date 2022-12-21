@@ -45,7 +45,6 @@ require('packer').startup(function(use)
   use 'tpope/vim-rhubarb'
   use 'lewis6991/gitsigns.nvim'
 
-  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
   use 'nvim-lualine/lualine.nvim' -- Fancier statusline
   use 'lukas-reineke/indent-blankline.nvim' -- Add indentation guides even on blank lines
   use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
@@ -60,13 +59,16 @@ require('packer').startup(function(use)
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
-  use { "kevinhwang91/rnvimr" }
-  use { "mattn/emmet-vim" }
-  use { "folke/which-key.nvim" }
-  use { "christoomey/vim-tmux-navigator" }
-  use { "vimwiki/vimwiki" }
-  use { "morhetz/gruvbox" }
-  use { "dracula/vim" }
+  use 'kevinhwang91/rnvimr'
+  use 'mattn/emmet-vim'
+  use 'folke/which-key.nvim'
+  use 'christoomey/vim-tmux-navigator'
+  use 'vimwiki/vimwiki'
+
+  -- Colours
+  use 'morhetz/gruvbox'
+  use 'dracula/vim'
+  use 'navarasu/onedark.nvim' -- Theme inspired by Atom
 
   -- hc
   use { "psaikido/harpoon" }

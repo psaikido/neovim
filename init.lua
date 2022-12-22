@@ -18,6 +18,7 @@ require('Comment').setup()
 require('hc.hupoon').setup()
 require('hc.lifetrak').setup()
 require('hc.indent_blankline')
+require('hc.undotree')
 require('which-key').setup {}
 
 -- vim: ts=2 sts=2 sw=2 et

@@ -50,11 +50,11 @@ vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon 
 
 -- Hupoon
 local hupoon = require("hupoon")
-vim.keymap.set('n', '<leader>u', hupoon.hupoon, {desc = "hupoon"})
-vim.keymap.set('n', '<leader>uh', hupoon.find_home, {desc = "Home Find"})
-vim.keymap.set('n', '<leader>uf', hupoon.find_here, {desc = "Here Find"})
-vim.keymap.set('n', '<leader>up', hupoon.browse_proj, {desc = "Browse Project"})
-vim.keymap.set('n', '<leader>ub', hupoon.search_buffer, {desc = "Search Buffer"})
+vim.keymap.set('n', '<leader>o', hupoon.hupoon, {desc = "hupoon"})
+vim.keymap.set('n', '<leader>oh', hupoon.find_home, {desc = "Home Find"})
+vim.keymap.set('n', '<leader>of', hupoon.find_here, {desc = "Here Find"})
+vim.keymap.set('n', '<leader>op', hupoon.browse_proj, {desc = "Browse Project"})
+vim.keymap.set('n', '<leader>ob', hupoon.search_buffer, {desc = "Search Buffer"})
 
 
 -- Ranger
@@ -69,19 +69,19 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
 -- lifetrak
-local lifetrak = require('lifetrak')
-local filter_tags = require('lifetrak.filter_tags')
-local filter_metas = require('lifetrak.filter_metas')
-local lifetrak_utils = require('lifetrak.utils')
-vim.keymap.set('n', '<leader>lj', lifetrak.view_down, {desc = "Next entry"})
-vim.keymap.set('n', '<leader>lk', lifetrak.view_up, {desc = "Previous entry"})
-vim.keymap.set('n', '<leader>le', lifetrak.journal_entry, {desc = "New entry"})
-vim.keymap.set('n', '<leader>lc', lifetrak.change_current, {desc = "Change current journal"})
-vim.keymap.set('n', '<leader>lo', lifetrak.open_current, {desc = "Open current journal"})
-vim.keymap.set('n', '<leader>lt', filter_tags.choose_tag, {desc = "Filter by tag"})
-vim.keymap.set('n', '<leader>lm', filter_metas.choose_meta, {desc = "Filter by metas"})
-vim.keymap.set('n', '<leader>lr', lifetrak_utils.reload, {desc = "Reload"})
+vim.keymap.set('n', '<leader>lj', require('lifetrak').view_down, {desc = "Next entry"})
+vim.keymap.set('n', '<leader>lk', require('lifetrak').view_up, {desc = "Previous entry"})
+vim.keymap.set('n', '<leader>le', require('lifetrak').journal_entry, {desc = "New entry"})
+vim.keymap.set('n', '<leader>lc', require('lifetrak').change_current, {desc = "Change current journal"})
+vim.keymap.set('n', '<leader>lo', require('lifetrak').open_current, {desc = "Open current journal"})
+vim.keymap.set('n', '<leader>lt', require('lifetrak.filter_tags').choose_tag, {desc = "Filter by tag"})
+vim.keymap.set('n', '<leader>lm', require('lifetrak.filter_metas').choose_meta, {desc = "Filter by metas"})
+vim.keymap.set('n', '<leader>lr', require('lifetrak.utils').reload, {desc = "Reload"})
 
+
+-- Undotree
+vim.keymap.set('n', '<leader>uo', require('undotree').open, { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>uc', require('undotree').close, { noremap = true, silent = true })
 
 -- Add two spaces macro for markdown
 -- Put cursor on starting line first and run @s

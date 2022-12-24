@@ -38,7 +38,7 @@ require('packer').startup(function(use)
   use 'lukas-reineke/indent-blankline.nvim'
   use 'mattn/emmet-vim'
   use 'numToStr/Comment.nvim'
-  use 'nvim-lualine/lualine.nvim'
+  use 'vim-airline/vim-airline'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
   use 'tpope/vim-sleuth'

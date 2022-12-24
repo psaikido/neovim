@@ -6,7 +6,6 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 require('hc.gitsigns')
-require('hc.lualine')
 require('hc.plugins')
 require('hc.telescope')
 require('hc.transparent')

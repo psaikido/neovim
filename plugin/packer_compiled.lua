@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/lifetrak.nvim",
     url = "/home/hughie/code/nvim-plugins-hc/lifetrak.nvim"
   },
-  ["lualine.nvim"] = {
-    loaded = true,
-    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
   ["nvim-transparent"] = {
     loaded = true,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-transparent",
@@ -183,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/vim",
     url = "https://github.com/dracula/vim"
+  },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
   },
   ["vim-fugitive"] = {
     loaded = true,

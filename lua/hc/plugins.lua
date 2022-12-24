@@ -48,7 +48,6 @@ require('packer').startup(function(use)
   -- Look
   use 'dracula/vim'
   use 'morhetz/gruvbox'
-  use 'xiyaowong/nvim-transparent'
 
   -- hc
   use 'psaikido/harpoon'

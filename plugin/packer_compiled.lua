@@ -114,11 +114,6 @@ _G.packer_plugins = {
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/lifetrak.nvim",
     url = "/home/hughie/code/nvim-plugins-hc/lifetrak.nvim"
   },
-  ["nvim-transparent"] = {
-    loaded = true,
-    path = "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-transparent",
-    url = "https://github.com/xiyaowong/nvim-transparent"
-  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/nvim-treesitter",

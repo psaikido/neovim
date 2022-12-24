@@ -8,7 +8,6 @@ vim.g.maplocalleader = ' '
 require('hc.gitsigns')
 require('hc.plugins')
 require('hc.telescope')
-require('hc.transparent')
 require('hc.treesitter')
 require('hc.utils')
 require('Comment').setup()

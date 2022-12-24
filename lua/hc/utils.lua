@@ -7,10 +7,13 @@ end
 
 function M.reload()
     for name,_ in pairs(package.loaded) do
-        package.loaded[name] = nil
+        -- if (string.match(name, "^lifetrak")) then
+            package.loaded[name] = nil
+        -- end
     end
+
     dofile(vim.env.MYVIMRC)
-    vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
+    vim.notify("nvim reloaded!", vim.log.levels.INFO)
 end
 
 M.p = function(v)

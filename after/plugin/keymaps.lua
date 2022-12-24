@@ -39,9 +39,9 @@ local harpoonui = require('harpoon.ui')
 local harpoonmark = require('harpoon.mark')
 vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
 vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
---
---
--- -- Hupoon
+
+
+-- Hupoon
 local hupoon = require("hupoon")
 vim.keymap.set('n', '<leader>o', hupoon.hupoon, {desc = "hupoon"})
 vim.keymap.set('n', '<leader>oh', hupoon.find_home, {desc = "Home Find"})

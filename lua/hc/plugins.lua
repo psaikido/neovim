@@ -11,21 +11,6 @@ require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
-  -- LSP
-  use {
-    'neovim/nvim-lspconfig',
-    requires = {
-      'williamboman/mason.nvim',
-      'williamboman/mason-lspconfig.nvim',
-      'j-hui/fidget.nvim',
-    },
-  }
-
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
-  }
-
   -- Treesitter
   use {
     'nvim-treesitter/nvim-treesitter',

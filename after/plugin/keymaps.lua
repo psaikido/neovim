@@ -34,38 +34,20 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 
 
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
-
-
 -- Harpoon
 local harpoonui = require('harpoon.ui')
 local harpoonmark = require('harpoon.mark')
 vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
 vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
-
-
--- Hupoon
+--
+--
+-- -- Hupoon
 local hupoon = require("hupoon")
 vim.keymap.set('n', '<leader>o', hupoon.hupoon, {desc = "hupoon"})
 vim.keymap.set('n', '<leader>oh', hupoon.find_home, {desc = "Home Find"})
 vim.keymap.set('n', '<leader>of', hupoon.find_here, {desc = "Here Find"})
 vim.keymap.set('n', '<leader>op', hupoon.browse_proj, {desc = "Browse Project"})
 vim.keymap.set('n', '<leader>ob', hupoon.search_buffer, {desc = "Search Buffer"})
-
-
--- Ranger
-vim.keymap.set('n', '<leader>e', ':RnvimrToggle<CR>', {})
-vim.keymap.set('t', '<leader>e', ':RnvimrToggle<CR>', {})
-vim.cmd('let g:rnvimr_enable_picker = 1')
-vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
-
-
--- fugitive - invoke git status
-vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
 -- lifetrak
@@ -77,6 +59,17 @@ vim.keymap.set('n', '<leader>lo', require('lifetrak').open_current, {desc = "Ope
 vim.keymap.set('n', '<leader>lt', require('lifetrak.filter_tags').choose_tag, {desc = "Filter by tag"})
 vim.keymap.set('n', '<leader>lm', require('lifetrak.filter_metas').choose_meta, {desc = "Filter by metas"})
 vim.keymap.set('n', '<leader>lr', require('lifetrak.utils').reload, {desc = "Reload"})
+
+
+-- Ranger
+vim.keymap.set('n', '<leader>e', ':RnvimrToggle<CR>', {})
+vim.keymap.set('t', '<leader>e', ':RnvimrToggle<CR>', {})
+vim.cmd('let g:rnvimr_enable_picker = 1')
+vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
+
+
+-- fugitive - invoke git status
+vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
 -- Undotree

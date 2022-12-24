@@ -5,9 +5,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require('hc.cmp')
 require('hc.gitsigns')
-require('hc.lsp')
 require('hc.lualine')
 require('hc.plugins')
 require('hc.telescope')

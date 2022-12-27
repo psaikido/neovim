@@ -1,0 +1,11 @@
+-- vimwiki initialisation has to be set before the plugin in sourced
+vim.cmd("let g:vimwiki_global_ext = 0")
+vim.cmd("let wiki_hc = {}")
+vim.cmd("let wiki_hc.path = '~/crypt/vimwiki/hc/'")
+vim.cmd("let wiki_hc.syntax = 'markdown'")
+vim.cmd("let wiki_hc.ext = 'md'")
+vim.cmd("let wiki_tech = {}")
+vim.cmd("let wiki_tech.path = '~/crypt/vimwiki/tech/'")
+vim.cmd("let wiki_tech.syntax = 'markdown'")
+vim.cmd("let wiki_tech.ext = 'md'")
+vim.cmd("let g:vimwiki_list = [wiki_tech, wiki_hc]")

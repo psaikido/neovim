@@ -2,7 +2,9 @@
 -- See `:help vim.o`
 
 -- indentation
+vim.o.shiftwidth  = 2
 vim.bo.shiftwidth = 2
+vim.o.tabstop     = 2
 vim.bo.tabstop    = 2
 
 -- Set highlight on search

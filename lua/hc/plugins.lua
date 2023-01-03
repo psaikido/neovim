@@ -45,6 +45,21 @@ require('packer').startup(function(use)
   use 'tpope/vim-sleuth'
   use 'vimwiki/vimwiki'
   use 'jiaoshijie/undotree'
+  use {
+  'phaazon/mind.nvim',
+  branch = 'v2.2',
+  requires = { 'nvim-lua/plenary.nvim' },
+  config = function()
+    require'mind'.setup({ 
+      opts = {
+        persistence = {
+          state_path = '~/crypt/mind.nvim/mind.json',
+          data_dir = '~/crypt/mind.nvim/data',
+        },
+      },
+    })
+  end
+}
 
   -- Look
   use 'dracula/vim'

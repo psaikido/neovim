@@ -1,6 +1,10 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
+-- indentation
+vim.bo.shiftwidth = 2
+vim.bo.tabstop    = 2
+
 -- Set highlight on search
 vim.o.hlsearch = false
 

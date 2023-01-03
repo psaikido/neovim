@@ -115,7 +115,7 @@ _G.packer_plugins = {
     url = "/home/hughie/code/nvim-plugins-hc/lifetrak.nvim"
   },
   ["mind.nvim"] = {
-    config = { "\27LJ\2\n§\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\topts\1\0\0\16persistence\1\0\0\1\0\2\15state_path ~/crypt/mind.nvim/mind.json\rdata_dir\27~/crypt/mind.nvim/data\nsetup\tmind\frequire\0" },
+    config = { "\27LJ\2\n§\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\topts\1\0\0\16persistence\1\0\0\1\0\2\rdata_dir\27~/crypt/mind.nvim/data\15state_path ~/crypt/mind.nvim/mind.json\nsetup\tmind\frequire\0" },
     loaded = true,
     path = "/home/hughie/.local/share/nvim/site/pack/packer/start/mind.nvim",
     url = "https://github.com/phaazon/mind.nvim"
@@ -220,7 +220,7 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: mind.nvim
 time([[Config for mind.nvim]], true)
-try_loadstring("\27LJ\2\n§\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\topts\1\0\0\16persistence\1\0\0\1\0\2\15state_path ~/crypt/mind.nvim/mind.json\rdata_dir\27~/crypt/mind.nvim/data\nsetup\tmind\frequire\0", "config", "mind.nvim")
+try_loadstring("\27LJ\2\n§\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\4\0005\4\3\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\topts\1\0\0\16persistence\1\0\0\1\0\2\rdata_dir\27~/crypt/mind.nvim/data\15state_path ~/crypt/mind.nvim/mind.json\nsetup\tmind\frequire\0", "config", "mind.nvim")
 time([[Config for mind.nvim]], false)
 -- Conditional loads
 time([[Conditional loading of telescope-fzf-native.nvim]], true)

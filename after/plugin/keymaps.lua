@@ -52,14 +52,9 @@ vim.keymap.set('n', '<leader>ob', hupoon.search_buffer, {desc = "Search Buffer"}
 
 
 -- lifetrak
+vim.keymap.set('n', '<leader>le', require('lifetrak').journal_entry, {desc = "New entry"})
 vim.keymap.set('n', '<leader>lj', require('lifetrak').view_down, {desc = "Next entry"})
 vim.keymap.set('n', '<leader>lk', require('lifetrak').view_up, {desc = "Previous entry"})
-vim.keymap.set('n', '<leader>le', require('lifetrak').journal_entry, {desc = "New entry"})
-vim.keymap.set('n', '<leader>lc', require('lifetrak').change_current, {desc = "Change current journal"})
-vim.keymap.set('n', '<leader>lo', require('lifetrak').open_current, {desc = "Open current journal"})
-vim.keymap.set('n', '<leader>lt', require('lifetrak.filter_tags').choose_tag, {desc = "Filter by tag"})
-vim.keymap.set('n', '<leader>lm', require('lifetrak.filter_metas').choose_meta, {desc = "Filter by metas"})
-vim.keymap.set('n', '<leader>lr', require('lifetrak.utils').reload, {desc = "Reload"})
 
 
 -- Ranger

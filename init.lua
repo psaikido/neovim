@@ -1,12 +1,12 @@
--- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require('hc.gitsigns')
+require("lazy").setup(plugins, opts)
 require('hc.plugins')
+require('hc.gitsigns')
 require('hc.telescope')
 require('hc.treesitter')
 require('hc.utils')

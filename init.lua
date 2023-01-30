@@ -4,7 +4,6 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-require("lazy").setup(plugins, opts)
 require('hc.plugins')
 require('hc.gitsigns')
 require('hc.telescope')

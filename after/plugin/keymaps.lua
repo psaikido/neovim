@@ -1,5 +1,4 @@
 -- HC
--- vim.g.mapleader = ';'
 local silent = { silent = true }
 
 

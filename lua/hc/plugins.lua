@@ -42,7 +42,6 @@ require('lazy').setup({
   'vim-airline/vim-airline',
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  'tpope/vim-sleuth',
   'vimwiki/vimwiki',
   'jiaoshijie/undotree',
   {

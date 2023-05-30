@@ -2,6 +2,8 @@ M = {}
 
 function M.setup()
   local config = {
+		dir = '~/code/nvim-plugins-hc/lifetrak.nvim',
+
     journals = {
       {
         file = '~/crypt/journal/journal.lft',

@@ -10,6 +10,7 @@ vim.keymap.set('n', '<leader>sh', ':set hls<CR>', {})
 vim.keymap.set('i', 'kj', '<Esc>', {})
 vim.keymap.set('n', '<leader>ra', ':lua require("hc.utils").reload()<CR>', {})
 vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {desc = "Zoom"})
+vim.keymap.set('n', '<leader>j', 'vapgq', {desc = "justify"})
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {desc = "move visual lines down"})
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
 
@@ -42,12 +43,12 @@ vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon 
 
 
 -- Hupoon
-local hupoon = require("hupoon")
-vim.keymap.set('n', '<leader>o', hupoon.hupoon, {desc = "hupoon"})
-vim.keymap.set('n', '<leader>oh', hupoon.find_home, {desc = "Home Find"})
-vim.keymap.set('n', '<leader>of', hupoon.find_here, {desc = "Here Find"})
-vim.keymap.set('n', '<leader>op', hupoon.browse_proj, {desc = "Browse Project"})
-vim.keymap.set('n', '<leader>ob', hupoon.search_buffer, {desc = "Search Buffer"})
+-- local hupoon = require("hupoon")
+-- vim.keymap.set('n', '<leader>o', hupoon.hupoon, {desc = "hupoon"})
+-- vim.keymap.set('n', '<leader>oh', hupoon.find_home, {desc = "Home Find"})
+-- vim.keymap.set('n', '<leader>of', hupoon.find_here, {desc = "Here Find"})
+-- vim.keymap.set('n', '<leader>op', hupoon.browse_proj, {desc = "Browse Project"})
+-- vim.keymap.set('n', '<leader>ob', hupoon.search_buffer, {desc = "Search Buffer"})
 
 
 -- lifetrak

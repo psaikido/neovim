@@ -63,18 +63,14 @@ require('lazy').setup({
     "iamcco/markdown-preview.nvim",
     build = function() vim.fn["mkdp#util#install"]() end,
   }),
+	'vim-vdebug/vdebug',
+	'ThePrimeagen/harpoon',
 
   -- Look
   'dracula/vim',
   'morhetz/gruvbox',
 
   -- hc
-  'psaikido/harpoon',
-	{ 
-		dir = '~/code/nvim-plugins-hc/hupoon.nvim',
-	},
-	{ 
-		dir = '~/code/nvim-plugins-hc/lifetrak.nvim',
-	},
+  'psaikido/lifetrak.nvim',
 })
 

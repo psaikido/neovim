@@ -34,7 +34,6 @@ require('lazy').setup({
 	-- Utilities
 	'christoomey/vim-tmux-navigator',
 	'folke/which-key.nvim',
-	'kevinhwang91/rnvimr',
 	'lewis6991/gitsigns.nvim',
 	'lukas-reineke/indent-blankline.nvim',
 	'mattn/emmet-vim',
@@ -65,6 +64,18 @@ require('lazy').setup({
 	}),
 	'vim-vdebug/vdebug',
 	'ThePrimeagen/harpoon',
+	{
+		'kelly-lin/ranger.nvim',
+		config = function()
+			require("ranger-nvim").setup({ replace_netrw = true })
+			vim.api.nvim_set_keymap("n", "<leader>e", "", {
+				noremap = true,
+				callback = function()
+					require("ranger-nvim").open(true)
+				end,
+			})
+		end,
+	},
 
 	-- Look
 	'dracula/vim',
@@ -74,9 +85,6 @@ require('lazy').setup({
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
-		opts = {
-			-- add any options here
-		},
 		dependencies = {
 			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 			"MunifTanjim/nui.nvim",
@@ -84,7 +92,11 @@ require('lazy').setup({
 			--   `nvim-notify` is only needed, if you want to use the notification view.
 			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
-		}
+		},
+	},
+	{
+		'goolord/alpha-nvim',
+		dependencies = { 'nvim-tree/nvim-web-devicons' },
 	},
 
 	-- hc

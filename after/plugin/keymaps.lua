@@ -58,10 +58,10 @@ vim.keymap.set('n', '<leader>lk', require('lifetrak').view_up, {desc = "Previous
 
 
 -- Ranger
-vim.keymap.set('n', '<leader>e', ':RnvimrToggle<CR>', {})
-vim.keymap.set('t', '<leader>e', ':RnvimrToggle<CR>', {})
-vim.cmd('let g:rnvimr_enable_picker = 1')
-vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
+-- vim.keymap.set('n', '<leader>e', ':RnvimrToggle<CR>', {})
+-- vim.keymap.set('t', '<leader>e', ':RnvimrToggle<CR>', {})
+-- vim.cmd('let g:rnvimr_enable_picker = 1')
+-- vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
 
 
 -- fugitive - invoke git status

@@ -41,23 +41,30 @@ require('lazy').setup({
 	'vim-airline/vim-airline',
 	'tpope/vim-fugitive',
 	'tpope/vim-rhubarb',
-	'vimwiki/vimwiki',
-	'jiaoshijie/undotree',
 	{
-		'phaazon/mind.nvim',
-		branch = 'v2.2',
-		dependencies = { 'nvim-lua/plenary.nvim' },
-		config = function()
-			require'mind'.setup({ 
-				opts = {
-					persistence = {
-						state_path = '~/crypt/mind.nvim/mind.json',
-						data_dir = '~/crypt/mind.nvim/data',
-					},
+		'vimwiki/vimwiki',
+		init = function()
+			vim.g.vimwiki_folding = ""
+			vim.g.vimwiki_list = {
+				{
+					path = "~/crypt/vimwiki/hc/",
+					syntax = "markdown",
+					ext = ".md",
 				},
-			})
-		end
+				{
+					path = "~/crypt/vimwiki/tech/",
+					syntax = "markdown",
+					ext = ".md",
+				},
+			}
+			vim.g.vimwiki_ext2syntax = {
+				[".md"] = "markdown",
+				[".markdown"] = "markdown",
+				[".mdown"] = "markdown",
+			}
+		end,
 	},
+	'jiaoshijie/undotree',
 	({
 		"iamcco/markdown-preview.nvim",
 		build = function() vim.fn["mkdp#util#install"]() end,

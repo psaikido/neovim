@@ -80,6 +80,8 @@ require('lazy').setup({
 	-- Look
 	'dracula/vim',
 	'morhetz/gruvbox',
+	'echasnovski/mini.animate',
+	'ggandor/leap.nvim',
 
 	-- lazy.nvim
 	{

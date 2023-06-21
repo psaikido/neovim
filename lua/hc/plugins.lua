@@ -40,7 +40,6 @@ require('lazy').setup({
 	'numToStr/Comment.nvim',
 	'vim-airline/vim-airline',
 	'tpope/vim-fugitive',
-	'tpope/vim-rhubarb',
 	{
 		'vimwiki/vimwiki',
 		init = function()
@@ -90,19 +89,7 @@ require('lazy').setup({
 	'echasnovski/mini.animate',
 	'ggandor/leap.nvim',
 
-	-- lazy.nvim
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		dependencies = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
-			"rcarriga/nvim-notify",
-		},
-	},
+	-- Splash screen helper
 	{
 		'goolord/alpha-nvim',
 		dependencies = { 'nvim-tree/nvim-web-devicons' },

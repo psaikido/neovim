@@ -12,8 +12,6 @@ require('hc.utils')
 require('hc.lifetrak').setup()
 require('hc.indent_blankline')
 require('hc.undotree')
-require('hc.notify')
-require('hc.noice')
 require('hc.alpha')
 require('which-key').setup {}
 require('Comment').setup()

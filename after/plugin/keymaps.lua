@@ -13,6 +13,7 @@ vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {desc = "Zoom"})
 vim.keymap.set('n', '<leader>j', 'vapgq', {desc = "justify"})
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {desc = "move visual lines down"})
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
+vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<cr>', {desc = "minifiles"})
 
 
 -- Telescope
@@ -42,26 +43,12 @@ vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
 vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
 
 
--- Hupoon
--- local hupoon = require("hupoon")
--- vim.keymap.set('n', '<leader>o', hupoon.hupoon, {desc = "hupoon"})
--- vim.keymap.set('n', '<leader>oh', hupoon.find_home, {desc = "Home Find"})
--- vim.keymap.set('n', '<leader>of', hupoon.find_here, {desc = "Here Find"})
--- vim.keymap.set('n', '<leader>op', hupoon.browse_proj, {desc = "Browse Project"})
--- vim.keymap.set('n', '<leader>ob', hupoon.search_buffer, {desc = "Search Buffer"})
-
 
 -- lifetrak
 vim.keymap.set('n', '<leader>le', require('lifetrak').journal_entry, {desc = "New entry"})
 vim.keymap.set('n', '<leader>lj', require('lifetrak').view_down, {desc = "Next entry"})
 vim.keymap.set('n', '<leader>lk', require('lifetrak').view_up, {desc = "Previous entry"})
 
-
--- Ranger
--- vim.keymap.set('n', '<leader>e', ':RnvimrToggle<CR>', {})
--- vim.keymap.set('t', '<leader>e', ':RnvimrToggle<CR>', {})
--- vim.cmd('let g:rnvimr_enable_picker = 1')
--- vim.cmd('let g:rnvimr_border_attr = {"fg": 1, "bg": -1}')
 
 
 -- fugitive - invoke git status
@@ -71,6 +58,7 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 -- Undotree
 vim.keymap.set('n', '<leader>uo', require('undotree').open, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>uc', require('undotree').close, { noremap = true, silent = true })
+
 
 -- Add two spaces macro for markdown
 -- Put cursor on starting line first and run @s

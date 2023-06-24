@@ -16,6 +16,6 @@ require('hc.alpha')
 require('which-key').setup {}
 require('Comment').setup()
 require('mini.animate').setup()
-require('leap').add_default_mappings()
+require('mini.files').setup()
 
 -- vim: ts=2 sts=2 sw=2 et

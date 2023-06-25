@@ -10,7 +10,6 @@
   "lifetrak.nvim": { "branch": "master", "commit": "8c6364c6f02c7fb816da2810365ee5acd8b1c1a5" },
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
   "mini.animate": { "branch": "main", "commit": "b0978ee3dd0dafd644d0bc6c37c396dbe8658342" },
-  "mini.files": { "branch": "main", "commit": "b41cae07acd4a7695016f993f19175151921b0a6" },
   "nvim-treesitter": { "branch": "master", "commit": "c9d5812ba358ce9e5ae2df322550cc6bc1678538" },
   "nvim-treesitter-textobjects": { "branch": "master", "commit": "83c59ed1eeae70a55605990993cf4d208948fdf7" },
   "nvim-web-devicons": { "branch": "master", "commit": "14b3a5ba63b82b60cde98d0a40319d80f25e8301" },

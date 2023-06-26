@@ -13,7 +13,6 @@ vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {desc = "Zoom"})
 vim.keymap.set('n', '<leader>j', 'vapgq', {desc = "justify"})
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {desc = "move visual lines down"})
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
-vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<cr>', {desc = "minifiles"})
 
 
 -- Telescope
@@ -28,7 +27,7 @@ vim.keymap.set('n', '<leader>/', function()
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
 
-vim.keymap.set('n', '<leader>sf', ':Telescope file_browser<cr>', { desc = '[S]earch [F]ile-browser' })
+vim.keymap.set('n', '<leader>e', ':Telescope file_browser<cr>', { desc = '[S]earch [F]ile-browser' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })

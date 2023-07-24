@@ -6,7 +6,7 @@
   "gruvbox": { "branch": "master", "commit": "bf2885a95efdad7bd5e4794dd0213917770d79b7" },
   "harpoon": { "branch": "master", "commit": "21f4c47c6803d64ddb934a5b314dcb1b8e7365dc" },
   "indent-blankline.nvim": { "branch": "master", "commit": "7075d7861f7a6bbf0de0298c83f8a13195e6ec01" },
-  "lazy.nvim": { "branch": "main", "commit": "f8611632d0f9c6818e8eb54f9bcd1dad122b5a7f" },
+  "lazy.nvim": { "branch": "main", "commit": "da8b00581a52f5f87ad2aba9f52171fda7491f18" },
   "lifetrak.nvim": { "branch": "master", "commit": "8c6364c6f02c7fb816da2810365ee5acd8b1c1a5" },
   "markdown-preview.nvim": { "branch": "master", "commit": "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96" },
   "mini.animate": { "branch": "main", "commit": "b0978ee3dd0dafd644d0bc6c37c396dbe8658342" },

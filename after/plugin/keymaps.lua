@@ -13,6 +13,8 @@ vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {desc = "Zoom"})
 vim.keymap.set('n', '<leader>j', 'vapgq', {desc = "justify"})
 vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {desc = "move visual lines down"})
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
+vim.keymap.set('n', '<C-d>', '<C-d>zz', {})
+vim.keymap.set('n', '<C-u>', '<C-u>zz', {})
 
 
 -- Telescope

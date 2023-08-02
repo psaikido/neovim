@@ -37,7 +37,7 @@ vim.keymap.set('n', '<leader>ss', require('telescope.builtin').find_files, { des
 
 
 -- neotree
-vim.keymap.set('n', '<leader>e', ':Neotree float<cr>')
+vim.keymap.set('n', '<leader>e', ':Neotree float reveal<cr>')
 
 
 -- Harpoon

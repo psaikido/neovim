@@ -35,8 +35,10 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>ss', require('telescope.builtin').find_files, { desc = '[S]earch file[S]' })
 
+
 -- neotree
 vim.keymap.set('n', '<leader>e', ':Neotree float<cr>')
+
 
 -- Harpoon
 local harpoonui = require('harpoon.ui')
@@ -45,12 +47,10 @@ vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
 vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
 
 
-
 -- lifetrak
 vim.keymap.set('n', '<leader>le', require('lifetrak').journal_entry, {desc = "New entry"})
 vim.keymap.set('n', '<leader>lj', require('lifetrak').view_down, {desc = "Next entry"})
 vim.keymap.set('n', '<leader>lk', require('lifetrak').view_up, {desc = "Previous entry"})
-
 
 
 -- fugitive - invoke git status
@@ -87,8 +87,10 @@ vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', silent, {})
 vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', silent, {})
 vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', silent, {})
 
+
 -- Keymaps for better default experience
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })

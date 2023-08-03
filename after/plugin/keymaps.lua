@@ -57,6 +57,9 @@ vim.keymap.set('n', '<leader>lk', require('lifetrak').view_up, {desc = "Previous
 vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
+-- lazygit
+vim.keymap.set('n', '<Leader>lg', ':LazyGit<CR>', {})
+
 -- Undotree
 vim.keymap.set('n', '<leader>uo', require('undotree').open, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>uc', require('undotree').close, { noremap = true, silent = true })

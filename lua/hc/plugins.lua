@@ -58,6 +58,12 @@ require('lazy').setup({
 	'vim-airline/vim-airline',
 	'tpope/vim-fugitive',
 	{
+		'kdheepak/lazygit.nvim',
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
 		'vimwiki/vimwiki',
 		init = function()
 			vim.g.vimwiki_folding = ""

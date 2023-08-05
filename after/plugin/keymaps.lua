@@ -60,6 +60,7 @@ vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 -- lazygit
 vim.keymap.set('n', '<Leader>lg', ':LazyGit<CR>', {})
 
+
 -- Undotree
 vim.keymap.set('n', '<leader>uo', require('undotree').open, { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>uc', require('undotree').close, { noremap = true, silent = true })
@@ -75,8 +76,12 @@ vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
 
 
 -- terminal
-vim.keymap.set('n', '<leader>t', ':sp <Bar> te<CR><C-w><C-r>', {})
+vim.keymap.set('n', '<leader>t', ':vsp <Bar> te<CR><C-w><C-r>', {})
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {})
+
+
+-- tagbar
+vim.keymap.set('n', '<leader>b', ':TagbarToggle<cr>', {})
 
 
 -- vimwiki

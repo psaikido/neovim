@@ -102,6 +102,7 @@ require('lazy').setup({
 			"MunifTanjim/nui.nvim",
 		},
   },
+	'preservim/tagbar',
 
 	-- Look
 	'dracula/vim',

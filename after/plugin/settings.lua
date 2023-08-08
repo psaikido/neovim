@@ -2,17 +2,21 @@
 -- See `:help vim.o`
 
 -- indentation
-vim.o.shiftwidth  = 2
-vim.bo.shiftwidth = 2
-vim.o.tabstop     = 2
-vim.bo.tabstop    = 2
+vim.o.shiftwidth  = 4
+vim.bo.shiftwidth = 4
+vim.o.tabstop     = 4
+vim.bo.tabstop    = 4
 
 -- Set highlight on search
 vim.o.hlsearch = false
 
+-- Line numbers
 vim.wo.number         = true
 vim.wo.relativenumber = true
 vim.o.cmdheight       = 1
+
+-- Hilight cursor line
+vim.o.cursorline = true
 
 -- Enable mouse mode
 vim.o.mouse = 'a'

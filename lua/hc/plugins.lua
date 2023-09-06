@@ -49,20 +49,40 @@ require('lazy').setup({
 	{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make', cond = vim.fn.executable 'make' == 1 },
 
 	-- Utilities
-	'christoomey/vim-tmux-navigator',
 	'folke/which-key.nvim',
 	'lewis6991/gitsigns.nvim',
-	'lukas-reineke/indent-blankline.nvim',
-	'mattn/emmet-vim',
 	'numToStr/Comment.nvim',
-	'vim-airline/vim-airline',
-	'tpope/vim-fugitive',
+	'jiaoshijie/undotree',
+
+	-- Lazygit
 	{
 		'kdheepak/lazygit.nvim',
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
 	},
+
+	-- Navigation
+	'ThePrimeagen/harpoon',
+
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons",
+			"MunifTanjim/nui.nvim",
+		},
+  },
+	'preservim/tagbar',
+	'christoomey/vim-tmux-navigator',
+
+	-- Look
+	'morhetz/gruvbox',
+	'echasnovski/mini.animate',
+	'vim-airline/vim-airline',
+
+	-- hc
+	'psaikido/lifetrak.nvim',
 	{
 		'vimwiki/vimwiki',
 		init = function()
@@ -86,36 +106,5 @@ require('lazy').setup({
 			}
 		end,
 	},
-	'jiaoshijie/undotree',
-	({
-		"iamcco/markdown-preview.nvim",
-		build = function() vim.fn["mkdp#util#install"]() end,
-	}),
-	'vim-vdebug/vdebug',
-	'ThePrimeagen/harpoon',
-
-	{
-		"nvim-neo-tree/neo-tree.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons",
-			"MunifTanjim/nui.nvim",
-		},
-  },
-	'preservim/tagbar',
-
-	-- Look
-	'dracula/vim',
-	'morhetz/gruvbox',
-	'echasnovski/mini.animate',
-
-	-- Splash screen helper
-	{
-		'goolord/alpha-nvim',
-		dependencies = { 'nvim-tree/nvim-web-devicons' },
-	},
-
-	-- hc
-	'psaikido/lifetrak.nvim',
 })
 

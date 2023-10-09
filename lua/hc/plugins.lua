@@ -54,6 +54,7 @@ require('lazy').setup({
 	'numToStr/Comment.nvim',
 	'jiaoshijie/undotree',
 	'mattn/emmet-vim',
+	'norcalli/nvim-colorizer.lua',
 
 	-- Lazygit
 	{

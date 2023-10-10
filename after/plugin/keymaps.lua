@@ -72,8 +72,9 @@ vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
 
 
 -- terminal
-vim.keymap.set('n', '<leader>t', ':vsp <Bar> te<CR><C-w><C-r>', {})
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {})
+-- vim.keymap.set('n', '<leader>t', ':vsp <Bar> te<CR><C-w><C-r>', {})
+-- vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {})
+vim.keymap.set('n', '<leader>t', ':FloatermToggle<cr>', {})
 
 
 -- tagbar

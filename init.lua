@@ -14,6 +14,7 @@ require('hc.lifetrak').setup()
 require('hc.undotree')
 require('hc.neo-tree')
 require('hc.colorizer')
+require('hc.floaterm')
 require('which-key').setup {}
 require('Comment').setup()
 require('mini.animate').setup()

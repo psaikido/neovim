@@ -15,6 +15,7 @@ require('hc.undotree')
 require('hc.neo-tree')
 require('hc.colorizer')
 require('hc.floaterm')
+require('hc.emmet')
 require('which-key').setup {}
 require('Comment').setup()
 require('mini.animate').setup()

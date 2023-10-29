@@ -55,7 +55,6 @@ require('lazy').setup({
 	'jiaoshijie/undotree',
 	'mattn/emmet-vim',
 	'norcalli/nvim-colorizer.lua',
-	'voldikss/vim-floaterm',
 
 	-- Lazygit
 	{

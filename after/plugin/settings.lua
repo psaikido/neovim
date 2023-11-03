@@ -2,10 +2,10 @@
 -- See `:help vim.o`
 
 -- indentation
-vim.o.shiftwidth  = 2
-vim.bo.shiftwidth = 2
-vim.o.tabstop     = 2
-vim.bo.tabstop    = 2
+vim.o.shiftwidth  = 4
+vim.bo.shiftwidth = 4
+vim.o.tabstop     = 4
+vim.bo.tabstop    = 4
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -44,6 +44,7 @@ vim.api.nvim_set_hl(0, "Normal", { ctermbg=none })
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+-- keep the cursor in the middle
 vim.o.scrolloff = 999
 
 -- [[ Highlight on yank ]]

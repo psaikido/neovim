@@ -67,5 +67,7 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
     end
 })
 
+vim.cmd [[autocmd FileType * set formatoptions-=ro]]
+
 vim.cmd('set timeoutlen=500')
 

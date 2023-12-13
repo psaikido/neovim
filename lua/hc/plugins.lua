@@ -56,6 +56,13 @@ require('lazy').setup({
 	'mattn/emmet-vim',
 	'norcalli/nvim-colorizer.lua',
 
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+
 	-- Lazygit
 	{
 		'kdheepak/lazygit.nvim',
@@ -65,7 +72,14 @@ require('lazy').setup({
 	},
 
 	-- Navigation
-	'ThePrimeagen/harpoon',
+	{
+		'ThePrimeagen/harpoon',
+		-- branch = 'harpoon2',
+		branch = 'master',
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
 
 	{
 		"nvim-neo-tree/neo-tree.nvim",
@@ -74,7 +88,7 @@ require('lazy').setup({
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
 		},
-  },
+	},
 	'preservim/tagbar',
 	'christoomey/vim-tmux-navigator',
 
@@ -82,6 +96,14 @@ require('lazy').setup({
 	'morhetz/gruvbox',
 	'echasnovski/mini.animate',
 	'vim-airline/vim-airline',
+
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+
 
 	-- hc
 	'psaikido/lifetrak.nvim',

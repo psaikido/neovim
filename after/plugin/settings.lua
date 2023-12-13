@@ -37,7 +37,8 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[ colorscheme gruvbox ]]
+-- vim.cmd [[ colorscheme gruvbox ]]
+vim.cmd [[ colorscheme solarized-osaka ]]
 vim.cmd [[ set background=dark ]]
 vim.api.nvim_set_hl(0, "Normal", { ctermbg=none })
 
@@ -45,7 +46,7 @@ vim.api.nvim_set_hl(0, "Normal", { ctermbg=none })
 vim.o.completeopt = 'menuone,noselect'
 
 -- keep the cursor in the middle
-vim.o.scrolloff = 999
+-- vim.o.scrolloff = 999
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`

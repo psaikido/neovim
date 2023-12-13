@@ -5,7 +5,7 @@ local silent = { silent = true }
 -- General Usage
 vim.keymap.set('n', '<C-s>', ':w<CR>', {})
 vim.keymap.set('n', '<C-c>', ':q<CR>', {})
-vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', silent, {})
+vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', silent)
 vim.keymap.set('n', '<leader>sh', ':set hls<CR>', {})
 vim.keymap.set('i', 'kj', '<Esc>', {})
 vim.keymap.set('n', '<leader>ra', ':lua require("hc.utils").reload()<CR>', {})
@@ -45,6 +45,8 @@ local harpoonui = require('harpoon.ui')
 local harpoonmark = require('harpoon.mark')
 vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
 vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
+-- vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end)
+-- vim.keymap.set("n", "<leader>hj", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 
 -- lifetrak
@@ -74,7 +76,7 @@ vim.cmd("let @s = ':.,$g!/^\\s*$/norm A  '")
 -- terminal
 -- vim.keymap.set('n', '<leader>t', ':vsp <Bar> te<CR><C-w><C-r>', {})
 -- vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', {})
--- vim.keymap.set('n', '<leader>t', ':FloatermToggle<cr>', {})
+vim.keymap.set('n', '<leader>t', ':FloatermToggle<cr>', {})
 
 
 -- tagbar
@@ -87,10 +89,10 @@ vim.keymap.set('n', '<leader>w<leader>v', ':VimwikiVSplitLink<cr>', {})
 
 
 -- tmux nav
-vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<cr>', silent, {})
-vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', silent, {})
-vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', silent, {})
-vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', silent, {})
+vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<cr>', silent)
+vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<cr>', silent)
+vim.keymap.set('n', '<C-j>', ':TmuxNavigateDown<cr>', silent)
+vim.keymap.set('n', '<C-k>', ':TmuxNavigateUp<cr>', silent)
 
 
 -- Keymaps for better default experience

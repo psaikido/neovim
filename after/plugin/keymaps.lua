@@ -41,12 +41,13 @@ vim.keymap.set('n', '<leader>e', ':Neotree float reveal<cr>')
 
 
 -- Harpoon
-local harpoonui = require('harpoon.ui')
-local harpoonmark = require('harpoon.mark')
-vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
-vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
--- vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end)
--- vim.keymap.set("n", "<leader>hj", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+-- local harpoonui = require('harpoon.ui')
+-- local harpoonmark = require('harpoon.mark')
+-- vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
+-- vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
+local harpoon = require('harpoon')
+vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end)
+vim.keymap.set("n", "<leader>hj", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 
 -- lifetrak

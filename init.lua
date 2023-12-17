@@ -17,9 +17,9 @@ require('hc.colorizer')
 require('hc.floaterm')
 require('hc.emmet')
 require('hc.solarized-osaka')
+require('hc.harpoon')
 require('which-key').setup {}
 require('Comment').setup()
 require('mini.animate').setup()
-require('harpoon')
 
 -- vim: ts=2 sts=2 sw=2 et

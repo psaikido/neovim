@@ -73,9 +73,10 @@ require('lazy').setup({
 
 	-- Navigation
 	{
-		'ThePrimeagen/harpoon',
-		-- branch = 'harpoon2',
-		branch = 'master',
+		-- 'ThePrimeagen/harpoon',
+		-- branch = 'master',
+		'psaikido/harpoon',
+		branch = 'harpoon2',
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},

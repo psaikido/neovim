@@ -56,8 +56,8 @@ vim.keymap.set('n', '<leader>lj', require('lifetrak').view_down, {desc = "Next e
 vim.keymap.set('n', '<leader>lk', require('lifetrak').view_up, {desc = "Previous entry"})
 
 
--- lazygit
-vim.keymap.set('n', '<Leader>lg', ':LazyGit<CR>', {})
+-- Fugitive
+vim.keymap.set('n', '<Leader>g', ':Git<CR>', {})
 
 
 -- Undotree

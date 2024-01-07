@@ -55,27 +55,12 @@ require('lazy').setup({
 	'jiaoshijie/undotree',
 	'mattn/emmet-vim',
 	'norcalli/nvim-colorizer.lua',
+	'tpope/vim-fugitive',
 
-	{
-		"craftzdog/solarized-osaka.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
-
-	-- Lazygit
-	{
-		'kdheepak/lazygit.nvim',
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-	},
 
 	-- Navigation
 	{
-		-- 'ThePrimeagen/harpoon',
-		-- branch = 'master',
-		'psaikido/harpoon',
+		'ThePrimeagen/harpoon',
 		branch = 'harpoon2',
 		dependencies = {
 			"nvim-lua/plenary.nvim",

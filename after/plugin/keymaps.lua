@@ -7,7 +7,6 @@ vim.keymap.set('n', '<C-s>', ':w<CR>', {})
 vim.keymap.set('n', '<C-c>', ':q<CR>', {})
 vim.keymap.set('n', '<Esc>', ':nohlsearch<CR>', silent)
 vim.keymap.set('n', '<leader>sh', ':set hls<CR>', {})
-vim.keymap.set('i', 'kj', '<Esc>', {})
 vim.keymap.set('n', '<leader>ra', ':lua require("hc.utils").reload()<CR>', {})
 vim.keymap.set('n', '<leader>b', '<C-w>|<CR>', {desc = "Zoom"})
 vim.keymap.set('n', '<leader>j', 'vapgq', {desc = "justify"})
@@ -15,7 +14,12 @@ vim.keymap.set('v', 'J', ':m \'>+1<CR>gv=gv', {desc = "move visual lines down"})
 vim.keymap.set('v', 'K', ':m \'<-2<CR>gv=gv', {desc = "move visual lines up"})
 vim.keymap.set('n', '<C-d>', '<C-d>zz', {})
 vim.keymap.set('n', '<C-u>', '<C-u>zz', {})
+vim.keymap.set('i', 'kj', '<Esc>', {})
 
+-- holmak
+vim.keymap.set('i', 'ea', '<Esc>', {})
+vim.keymap.set('n', 'a', 'j')
+vim.keymap.set('n', 'e', 'k')
 
 -- Telescope
 -- See `:help telescope.builtin`
@@ -41,10 +45,6 @@ vim.keymap.set('n', '<leader>e', ':Neotree float reveal<cr>')
 
 
 -- Harpoon
--- local harpoonui = require('harpoon.ui')
--- local harpoonmark = require('harpoon.mark')
--- vim.keymap.set('n', "<leader>ha", harpoonmark.add_file, {desc = "harpoon add"})
--- vim.keymap.set('n', "<leader>hj", harpoonui.toggle_quick_menu, {desc = "harpoon show"})
 local harpoon = require('harpoon')
 vim.keymap.set("n", "<leader>ha", function() harpoon:list():append() end)
 vim.keymap.set("n", "<leader>hj", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
